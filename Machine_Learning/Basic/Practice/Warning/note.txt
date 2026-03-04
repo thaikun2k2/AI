@@ -1,0 +1,5 @@
+#tải thư viện numpy, pandas,v.v cho jupyter 
+
+#Bước 1: vào 'Terminal' của máy tính bạn
+#Bước 2: Copy & Paste vào lệnh "pip install pandas" nếu muốn cài thư viện pandas
+         Copy & Paste vào lệnh "pip install matplotlib" nếu muốn cài thư viện matplotlib
