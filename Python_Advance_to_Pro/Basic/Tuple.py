@@ -90,10 +90,10 @@
 
 #######################################################################################################
 
-x = [2, 4, "a"]
-y = [2, 4, "a"]
-print(x == y) ## so sánh giá trị của x và y
-print(x is y) ## so sánh địa chỉ hay còn gọi là có trùng nhau hay ko của x và y, != ở ô nhớ 
+# x = [2, 4, "a"]
+# y = [2, 4, "a"]
+# print(x == y) ## so sánh giá trị của x và y
+# print(x is y) ## so sánh địa chỉ hay còn gọi là có trùng nhau hay ko của x và y, != ở ô nhớ 
 
 
 
@@ -103,24 +103,209 @@ print(x is y) ## so sánh địa chỉ hay còn gọi là có trùng nhau hay ko
 ### ở tuple a và b đều chỉ lưu ở cùng 1 ô nhớ nên a is b sẽ trả về True
 
 
-a = (2, 4, "a")
-b = (2, 4, "a")
-print(a == b) ## so sánh giá trị của a và b
-print(a is b) ## so sánh địa chỉ hay còn gọi là có trùng nhau
-print(id(a))
-print(id(b))
-
+# a = (2, 4, "a")
+# b = (2, 4, "a")
+# print(a == b) ## so sánh giá trị của a và b
+# print(a is b) ## so sánh địa chỉ hay còn gọi là có trùng nhau
+# print(id(a))
+# print(id(b))
+# print("\n")
 
 # 2 phần tử ở 2 danh sách co kiểu khác nhau là mutable thì sẽ không cùng 1 ô nhớ nữa!
 
-c = (2, 4, [1, 3])
-d = (2, 4, [1, 3])
-print(c == d) ## so sánh giá trị của c và d
-print(c is d) ## so sánh địa chỉ hay còn gọi là có trùng nhau
-print(id(c))
-print(id(d))
+# c = (2, 4, [1, 3])
+# d = (2, 4, [1, 3])
+# print(c == d) ## so sánh giá trị của c và d
+# print(c is d) ## so sánh địa chỉ hay còn gọi là có trùng nhau
+# print(id(c))
+# print(id(d))
+# print("\n")
+
+
+# c = (2, 4, [1, 3])
+# d = (2, 4, [1, 3])
+# print(c[0] == d[0]) ## so sánh giá trị của c và d
+# print(c[0] is d[0]) ## so sánh địa chỉ hay còn gọi là có trùng nhau
+# print(id(c[0]))
+# print(id(d[0]))
+# print("\n")
+
+
+# h = (2, 4+5j, 9)
+# g = (2, 4+5j, 9)
+# print(h[1] == g[1]) 
+# print(h[1] is g[1]) 
+# print(id(g[1]))
+# print(id(h[1]))
+# print("\n")
+
+# i = [2, 4, (5, 7)]
+# o = [2, 4, (5, 7)]
+# print(i[2] == o[2]) 
+# print(i[2] is o[2]) ##a[2] == b[2] là immutable vì cùng trỏ đến 1 ô nhớ chứa tuple (5, 7) nên sẽ trả về True
+# print(type(i))
+# print(type(o))
+# print("\n")
+
+
+
+# u = [2, 4, {5, 7}]
+# j = [2, 4, {5, 7}]
+# print(u[2] == j[2]) 
+# print(u[2] is j[2]) ##a[2] != b[2] là set là mutable nên sẽ trả về False vì 2 set {5, 7} ở 2 ô nhớ !=
+# print(type(u))
+# print(type(j))
+# print("\n")
+
+#############################################################################################
+
+
+##hàm hash là một hàm băm, được sử dụng để tạo ra một giá trị duy nhất (hash value) cho một đối tượng.
+##hash value được sử dụng để xác định vị trí của đối tượng trong một cấu trúc
+## dữ liệu như bảng băm (hash table) hoặc để kiểm tra tính toàn vẹn của dữ liệu.
+##hàm hash có thể được sử dụng để kiểm tra xem một đối tượng có thể được
+##sử dụng làm khóa trong một cấu trúc dữ liệu như dictionary hay không. Nếu một đối tượng có thể được hash, nó có thể được sử dụng làm khóa trong một dictionary.
+
+# x ="abc"
+# z = hash(x)
+# print(" kết quả sau hàm hash:  ",z) 
+
+# y = "abcdeghretyghjklcgtvhbjknkyuihjkl"
+# a = hash(y)
+# print(" kết quả sau hàm hash:  ",a)#
+
+# b = (2, 4, 1, 1, 0, "a")
+# c = hash(b)
+# print(" kết quả sau hàm hash:  ",c)
+
+# d = range(200)
+# e = hash(d)
+# print(" kết quả sau hàm hash:  ",e)
+
+# g = 4,556677
+# h = hash(g)
+# print(" kết quả sau hàm hash:  ",h)
+
+# j = [2, 4, 1, 1, 0, "a"]
+# k = hash(j) 
+# print(" kết quả sau hàm hash:  ",k) ## sẽ báo lỗi vì list là mutable nên ko thể hash được   
+
+# i = {2, 4, 1, 1, 0, "a"}
+# l = hash(i)
+# print(" kết quả sau hàm hash:  ",l) ## sẽ báo lỗi vì set là mutable nên ko thể hash được 
+
+###=>> dữ liệu theo kiểu mutable sẽ không thể đưa vào hash vì nó là unhashable object
+
+# o = (2, 4, (1, 3))
+# p = hash(o) 
+# print(" kết quả sau hàm hash:  ",p) 
+
+# k = (2, 4, [1, 3])
+# l = hash(k) 
+# print(" kết quả sau hàm hash:  ",l) ## sẽ báo lỗi vì tuple chứa list là mutable nên ko thể hash được
+
+###=>> dãy có độ dài bằng nhau
+
+
+
+########################################################################################
+
+############ so sánh các kiểu dữ liệu:
+
+#######kiểu số (immutable)
+#hashable
+#toán tử toán học
+#==, !=, >, <, >=, <=,is,is not,...
+#int(), float(), complex(), bool()
+#randrange()
+#----------
+#----------
+#-----
+#max(), min()
+#------
+# del x
+#------
+#------
+#------
+#------
+#------
+#------
+#------
+#------
 
 
 
 
 
+
+#######kiểu String (immutable)
+#hashable
+#[n], [n:m], [n:m:k],+, in, for,... 
+#==, !=, >, <, >=, <=, is, is not
+#chr(), ord(), str(), repr()...
+#choice(), count()
+#index()
+# find()
+#len()
+#max(), min()
+#replace(old,new)
+# del x
+#------
+#------
+#------
+#------
+#------
+#------
+#z = x[::--1]
+#------
+
+
+
+
+#######kiểu Tuple (immutable)
+#hashable
+# if nếu có 1 ptu con là mutable thì hàm này sẽ là mutable
+#[n], [n:m], [n:m:k], +, in, for,... 
+#==, !=, >, <, >=, <=, is, is not, ...
+#tuple()
+#choice(), count()
+#index()
+#------
+#len()
+#max(), min()
+#------
+#del x
+#------
+#------
+#------
+#------
+#------
+#------
+#------
+#------
+
+
+
+
+#######kiểu List (mutable)
+#unhashable
+#[n], [n:m], [n:m:k], +, in, for,...
+#==, !=, >, <, >=, <=, is, is not,...
+#list()
+#choice(), count()
+#index()
+#------
+#len()
+#max(), min()
+#tenlist[n]  new
+#del x
+#clear()
+#remove()
+#del x[n]
+#append(), sort()
+#x.extend(y)
+#insert(index, ob)
+#pop()
+#reverse()
+#------
+#copy()
