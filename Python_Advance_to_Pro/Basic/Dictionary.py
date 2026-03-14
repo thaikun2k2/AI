@@ -66,5 +66,255 @@
 
 
 
-### so sánh các phương thức của list anđ dict
+########------------so sánh các phương thức của list anđ dict------------########
+
+###----------LIST----------###
+##khi có 1 List là: x =["a", "b", "c"]
+#Toán tử truy cập: x[n], x[n:m]
+#Toán tử !=: +, *, in, not in
+#Xóa 1 phtu: del x[n], x.remove(), x.pop(index)
+#Xóa biển: del[x]
+#Xóa vùng nhớ: x.clear() xóa cả biến cả vùng nhớ
+#Copy ALL: x.copy()
+#Lấy 1 PhTu: z = x.pop(index)
+#đếm số PhTu: len(x)
+#max,min: max(x), min(x)
+#update: x[n]  new value
+#add 1 PhTu: x.append() , x.insert()
+#Add N PhTu: x.extend()
+
+
+
+
+
+###----------DICT----------###
+#khi có 1 Dict là: d = {0 : "a", 1 : "b", 2 : "c"}
+#Toán tử truy cập: d[key] if ko tồn tại sẽ báo lỗi, z = d.get(key,default) nếu key ko tồn tại sẽ trả về giá trị default nếu ko thiết lập sẽ là None, ko có d[n:m]
+#z = d.setdefault(key,default) có 2 chức năng là: thêm 1 PhTu, trả về PhTu search
+#Toán tử !=: in, not in; nhưng ko có +, *
+#Xóa 1 phtu: del d[key], x.pop(key); nhưng ko có d.remove()
+#Xóa 1 phtu cuối cùng: e.popitem() nhưng do dict ko theo thứ tự nên sẽ có lúc ko xóa đc
+#Xóa biển: del x ##ko ảnh hưởng đến vùng nhớ
+#Xóa vùng nhớ: d.clear() còn biến vẫn còn nhưng là rỗng
+#Copy ALL: d.copy() --> tạo 1 dict mới lưu ở ô nhớ mới
+#Lấy 1 PhTu: z = d.pop(key) lấy phần tử có KEY như vậy ra, z = d.popitem() chỉ lấy phần tử cuối
+#đếm số PhTu: len(d)
+#max,min: max(d), min(d) ==>>trả về key max và key min lưu ý phải cùng 1 kiểu dữ liệu
+#update: d[key] = new value
+#add 1 PhTu: d[new key] = value, d.setdefault(key,default) nếu đưa vào key mới thì tạo bthg, nếu đưa vào key cũ sẽ ko thay đổi j cả
+#Add N PhTu: d.update()
+
+
+
+
+
+
+#--------------------------------------------------------------------------------#
+
+
+#######-----------Eg:-----------#######
+#
+d = {0:"Nguyễn Văn Tón", 1: "10 - 04 -2002", 2: 386188386}
+e = {"Full Name":"Nguyễn Văn Tón", "Birthday": "10 - 04 -2002", "Numbers Phone": 386188386}
+
+
+#z = d[3]#báo lỗi "KeyError: 3"
+#có cách != là d.get(key,default=none) là khi ko có key trong dict d sẽ trả về giá trị là None
+#z = d[0]
+#z = d.get(3)# ko có key ==3 trg dict sẽ trả về giá trị là: None,type == NoneType
+
+# z = d.get(3,"key ko tồn tại trg dict")#nếu muốn trả về nội dung là gì khi key ko tồn tại thì thêm vào
+# print(f'z = {z}')
+# print(f'type z là: {type(z)}')
+
+# ###TH1: kiểm tra tồn tại
+# y = 0 in d
+# print(y)
+
+# x = 3 in e
+# print(x)
+
+# ###TH2: duyệt qua key
+# for i in e:
+#     print(i," : ", e[i])
+
+# ###TH2: duyệt qua value(giá trị)
+
+# for i in e.values():
+#     print(i)
+
+
+####-------------Xóa 1 PhTu-------------####
+
+###---------Del e[]---------###
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# del e["Full Name"]
+
+# print(f'e== {e}')
+# print(f'id == {id(e)}')## ko thay dổi ID ==> ko thay đổi ô nhớ
+###-------------------------###
+
+###---------e.pop()---------###
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# e.pop("Full Name")
+
+# print(f'e== {e}')
+# print(f'id == {id(e)}')#ko thay dổi ID ==> ko thay đổi ô nhớ
+###-------------------------###
+
+
+###---------e.popitem()---------###
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# e.popitem()
+
+# print(f'e== {e}')
+# print(f'id == {id(e)}')#ko thay dổi ID ==> ko thay đổi ô nhớ
+###-------------------------###
+
+####------------------------------------####
+
+
+####-------------Xóa 1 biến-------------####
+
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# del e
+
+# #print(f'e== {e}') #ko tìm thấy nữa sẽ hiện "NameError: name 'e' is not defined"
+
+
+####------------------------------------####
+
+####-------------Xóa 1 Vùng nhớ-------------####
+
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# e.clear()
+
+# print(f'e== {e}') #hiện ra 1 dict rỗng chỉ xóa ô nhớ, ko xóa PhTu
+# print(f'id == {id(e)}')#ko thay dổi ID ==> ko thay đổi ô nhớ
+
+####----------------------------------------####
+
+####-------------Copy ALL-------------####
+
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# u = e.copy()
+
+# print(f'u== {u}') #hiện ra 1 dict mới
+# print(f'id u == {id(u)}')#thay dổi ID new ==> thay đổi sang ô nhớ new
+
+####-----------------------------------####
+
+
+######-------------GET 1 PhTu-------------######
+# ##GET PhTu theo key
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# z = e.pop("Birthday")
+
+# print(f'z== {z}') #hiện ra 1 PhTu đc GET ra dựa theo key
+# print(f'id z == {id(z)}')#thay dổi ID new ==> thay đổi sang ô nhớ new
+# print(type(z)) #type = str gồm value
+
+
+# ##GET PhTu cuối của dict
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# y = e.popitem()
+
+# print(f'y== {y}') #hiện ra 1 PhTu cuối của dict e
+# print(f'id y == {id(y)}')#thay dổi ID new ==> thay đổi sang ô nhớ new
+# print(type(y)) #type = tuple gồm key, value
+
+######------------------------------------######
+
+# ###-------Đếm số PhTu
+# print(f'e== {e}')
+# print(f'id == {id(e)}')
+# s = len(e)
+
+# print(f's== {s}') #hiện ra kết quả là có 3 PhTu trg dict e
+# print(type(s)) #type = int
+
+###-------MAX, MIN
+###lưu ý nếu trong 1 dict có  >= 1 key khác kiểu thì sẽ ko dùng đc max, min
+###key = String sẽ max sẽ là dài nhất,  tương tụ với min.
+###key = int sẽ hiện max là số to nhất, tương tụ với min.
+# r = max(e)
+# t = min(e)
+# print(f'r== {r}') #hiện ra kết quả là có 3 PhTu trg dict e
+# print(type(r)) #type = int
+# print(f't== {t}') #hiện ra kết quả là có 3 PhTu trg dict e
+# print(type(t)) #type = int
+
+###-------UPDATE
+
+# e["Full Name"] = "Nguyễn Văn Thái"
+# print(f'e== {e}') #
+# print(type(e)) #type = dict
+
+
+###-------Thêm 1 PhTu
+#e[new key] = value
+# e["Work"] = "IT"
+# print(f'e== {e}') #
+# print(type(e)) #type = dict
+
+#e.setdefault(key,default)
+# #key new thì thêm mới bthg
+# e.setdefault("Work", "IT")
+# print(f'e== {e}') #
+# print(type(e)) #type = dict
+
+# #key old sẽ ko thay đổi j cả
+# e.setdefault('Full Name', 'Nguyễn Văn Thái')
+# print(f'e== {e}') #
+# print(type(e)) #type = dict
+
+
+
+###-------Thêm N PhTu
+# #e.update()
+#lưu ý ko đc thêm phần tử có key same vs key trong dict
+
+# print(id(e))
+# e.update(d)
+# print(f'e== {e}') #
+# print(type(e)) #type = dict
+# print(id(e))## id ko ảnh hưởng j cả
+
+#Toán tử truy cập:
+# # z = d.get(key,default) nếu key ko tồn tại sẽ trả về giá trị default nếu ko thiết lập sẽ là None
+
+# print(id(e))
+# o = e.get(0,"ko tồn tại phần tử")
+# print(f'o== {o}') # trả về là: ko tồn tại phần tử
+# print(type(o)) #type = str
+# print(id(o))## id đã thay đổi 
+
+# j = e.get(0) # trả về là: None
+# print(f'j== {j}') #
+# print(type(o)) #type = str
+
+#z = d.setdefault(key,default)
+
+# p = e.setdefault("Full Name") #  
+# print(f'p== {p}') # trả về là: "Nguyễn Văn Tón" đã có trg dict
+# print(type(p)) #type = str
+# print(f'e== {e}')
+
+# print(id(e))
+# k = e.setdefault(0,"ko tồn tại phần tử")
+# print(f'k== {k}') # trả về là: ko tồn tại phần tử
+# print(f'e== {e}') #do ko tìm thấy PhTu đó nên nó đã thêm PhTu vào trong e dict là: ""0: 'ko tồn tại phần tử'""
+# print(id(k))## id đã thay đổi 
+# print(id(e))## id đã ko thay đổi 
+
+
+
 
