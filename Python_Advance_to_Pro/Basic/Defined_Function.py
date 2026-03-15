@@ -128,3 +128,98 @@ from math import * ## lấy tất cả thư viện math
 # print("giá trị hàm xx trả về là:", y)#giá trị đã thay đổi
 
 # print("giá trị của n là:", m)#giá trị đã thay đổi
+
+
+
+###########----def có đối số thay đổi, hàm nặc danh, biến cục bộ, biến toàn cục
+# def so_max(a, b):## định nghĩa có 2 số
+#     if a > b:
+#         smax = a
+#     else:
+#         smax = b
+#     return smax
+# #y = so_max(3, 4,) ##ko thể dựa vào so_max(3, 4, 5) vì theo định nghĩa chỉ đưa vào 2 số thôi
+
+# y = so_max(3, 4) ##ko thể dưad vào so_max(3, 4, 5) vì theo định nghĩa chỉ đưa vào 2 số thôi
+# print("number max: ", y)
+
+
+# def ham(var1, var2 = 2, *var3)
+# var1:required argument
+# phải truyền giá trị khi gọi hàm, nếu không sẽ báo lỗi
+# var2: default argument
+# nếu khi gọi hàm không truyền giá trị thì Python sẽ dùng giá trị mặc định (ở đây là 2)
+
+# *var3: variable length argument
+# cho phép truyền nhiều đối số tùy ý
+# các giá trị truyền vào sẽ được lưu dưới dạng tuple
+
+
+# def so_max(a, b, *c):## định nghĩa c là 1 đối số có số lượng phần tử thay đổi vì có " * "
+# #c là tuple có nhiều PhTu ở bên trong 0 - n
+#     if a > b:
+#         smax = a
+#     else:
+#         smax = b
+#     for i in c:
+#         if i > smax:
+#             smax = i
+
+#     return smax
+
+# y = so_max(3, 4, 5, 6, 7) ##vẫn đc
+# print("number max: ", y)
+
+
+################ Hàm nặc danh = Anonymous Functions
+#lambda[arg1[,arg2,.....argn]]:expression
+#can có nhiều argument, ko thể chứa nhiều biểu thức or nhiều lệnh, chỉ chứa 1 biểu thức duy nhất
+
+# #eg
+# def tong(a, b, c):
+#     t = a + b + c
+#     return t
+# tong1 = lambda a, b, c: a +b +c
+# y = tong(3, 4, 5)
+# print(f'tổng hàm là: {y}')
+# z = tong1(3, 4, 5)
+# print(f'tổng hàm nặc danh là: {z}')
+
+# tong2 = lambda a, b, c: a +b +c
+# print(f'tổng hàm nặc danh là: {tong2(1, 2, 3)}')
+
+# a, b là đối số truyền vào, not variable
+# t là 1 biến, variable - toàn cục: global variable
+
+# def tong (a, b):
+#     # t là 1 biến, variable - toàn cục: global variable
+#     t = a + b
+#     print(f'biến cục bộ: {t}')
+#     return t
+
+# y = tong (1, 9)
+# print("tong 2 so là : ", y)
+# t=5 #t toàn cục
+# print("biến toàn cục:", t) #ko liên quan đến t trg hàm tong(a, b)
+
+
+#############Hàm đệ quy
+## thay vì trả về 1 giá trị thì đệ quy trả về 1 lời gọi lại chính nó nhưng mức độ đơn giản hơn lặp lại đến khi đạt trạng thái đơn giản nhất
+#phải có điều kiện dừng
+#ưu điểm: gọn hơn, nhược điểm: khó theo dõi logic, khó gỡ rối, tốn bộ nhớ
+
+# #eg: giai thừa n
+# # import sys
+# # sys.setrecursionlimit(5000)
+# def giai_thua(n):
+#     if n == 1:
+#         return 1#trả về giá trị khi trả về giá trị thì nó sẽ dừng
+#     else:
+#         return n*giai_thua(n - 1)#trả về lời gọi chính bản thân hàm này
+    
+# y = giai_thua(3)
+# #y = giai_thua(1000)#ko thực hiện đc vì quá tốn bộ nhớ
+# #để thức hiện đc cần thiết lập bộ nhớ = câu lệnh sau:
+# # import sys
+# # sys.setrecursionlimit(5000)
+# print("giai thừa của n là: ",y)
