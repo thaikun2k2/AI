@@ -93,6 +93,14 @@ print(time_format)
 print(type(time_format))
 print("\n")
 
-time_tuple = nowtime
+# %c: định dạng ngày giờ đầy đủ theo hệ thống (locale's appropriate date and time representation)
+# Trong strftime: tạo chuỗi thời gian hoàn chỉnh từ tuple
+# Trong strptime: parse chuỗi thời gian theo định dạng đó về tuple
+time_tuple = time.strptime(time.strftime('%c', nowtime), '%c')
 print(time_tuple)
 print(type(time_tuple))
+print("\n")
+
+
+
+
