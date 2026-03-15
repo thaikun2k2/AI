@@ -1,51 +1,99 @@
 #Eg1: Có bao nhiêu giây đã trôi qua tính từ 12:00 AM 01-01-1970???
 
+import sys
 import time
 
-tichs = time.time()#tichs == tích tắc (đồng hồ quả lắc) = sec
-# print(f'sec hay còn gọi là tichs == {tichs}')
-# print(type(tichs))
+sys.stdout.reconfigure(encoding='utf-8') #terminal Python use UTF-8 để print, nên các ký tự tiếng Việt ko còn gây lỗi UnicodeEncodeError nữa
 
-# nowtime1 = time.localtime(1773580) ##time 1970 hiện tại
-# print(nowtime1)
-# print(type(nowtime1))
+# tichs = time.time()#tichs == tích tắc (đồng hồ quả lắc) = sec
+# # print(f'sec hay còn gọi là tichs == {tichs}')
+# # print(type(tichs))
 
-nowtime = time.localtime(tichs) #outcome time ở khu vực hiện tại(eg:Việt Nam = GMT + 7 hours) ##time hiện tại 1773580299,..
-# print(nowtime)
-# print(type(nowtime))
+# # nowtime1 = time.localtime(1773580) ##time 1970 hiện tại
+# # print(nowtime1)
+# # print(type(nowtime1))
 
-# nowtime2 = time.gmtime(tichs) #outcome time year,month,day theo UTC(giờ quốc tế) = GMT
-# print(nowtime2)
-# print(type(nowtime2))
+# nowtime = time.localtime(tichs) #outcome time ở khu vực hiện tại(eg:Việt Nam = GMT + 7 hours) ##time hiện tại 1773580299,..
+# # print(nowtime)
+# # print(type(nowtime))
 
-## nowtime, nowtime2 trả về 1 tuple
-# chuyển sang dạng dễ đọc use: time.asctime() =>> time về string
-## lưu ý phải đưa vào dữ liệu kiểu tuple should not đưa tichs vào đc
+# # nowtime2 = time.gmtime(tichs) #outcome time year,month,day theo UTC(giờ quốc tế) = GMT
+# # print(nowtime2)
+# # print(type(nowtime2))
 
-##cách 1: 
-# lấy số sec(tichs) --> nowtime(tuple)=time.localtime() -->time.asctime(nowtime) -->now time string
-timeread = time.asctime(nowtime)
-print(timeread)
-print(type(timeread))
+# ## nowtime, nowtime2 trả về 1 tuple
+# # chuyển sang dạng dễ đọc use: time.asctime() =>> time về string
+# ## lưu ý phải đưa vào dữ liệu kiểu tuple should not đưa tichs vào đc
 
-##cách 2: lấy số sec(tichs) --> time.ctime()
-timeread2 = time.ctime(tichs)
-print(timeread2)
-print(type(timeread2))
+# ##cách 1: 
+# # lấy số sec(tichs) --> nowtime(tuple)=time.localtime() -->time.asctime(nowtime) -->now time string
+# timeread = time.asctime(nowtime)
+# # print(timeread)
+# # print(type(timeread))
+
+# ##cách 2: lấy số sec(tichs) --> time.ctime()
+# timeread2 = time.ctime(tichs)
+# # print(timeread2)
+# # print(type(timeread2))
 
 
 
+# """
+# ######Date and Time: Module Time:
+# # time.time() time(sec) --> use time.ctime() --> time(string)
+# # time.time() time(sec) --> use time.localtime() or time.gmtime() --> time(tuple) -->use time.asctime() --> time(string)
+# # time.time() time(sec) --> use time.localtime() or time.gmtime() --> time(tuple) -->use time.strftime() --> time(format)
+# # time.time() time(sec) <-- use time.mktime() <-- time(tuple) <--use time.strptime() <-- time (format)
+# _____________________________________________________________________________________________________________________________________
+# | # | Luồng command Python                                                     | Kết quả cuối                                        |
+# | - | ------------------------------------------------------------------------ | --------------------------------------------------- |
+# | 1 | `time.time()` → `time.ctime()`                                           | `time(sec)` → `time(string)`                        |
+# | 2 | `time.time()` → `time.localtime()` / `time.gmtime()` → `time.asctime()`  | `time(sec)` → `time(tuple)` → `time(string)`        |
+# | 3 | `time.time()` → `time.localtime()` / `time.gmtime()` → `time.strftime()` | `time(sec)` → `time(tuple)` → `time(format string)` |
+# | 4 | `time.strptime()` → `time.mktime()`                                      | `time(format string)` → `time(tuple)` → `time(sec)` |
+# -------------------------------------------------------------------------------------------------------------------------------------
+# """
+# # print(tichs)
+# # print(type(tichs))
+# # time_sec = time.mktime(nowtime)
+# # print(time_sec)
+# # print(type(time_sec))
 
-######Date and Time: Module Time:
-# time.time() time(sec) --> use time.ctime() --> time(string)
-# time.time() time(sec) --> use time.localtime() or time.gmtime() --> time(tuple) -->use time.asctime() --> time(string)
-# time.time() time(sec) --> use time.localtime() or time.gmtime() --> time(tuple) -->use time.strftime() --> time(format)
-# time.time() time(sec) <-- use time.mktime() <-- time(tuple) <--use time.strptime() <-- time (format)
-"""
-| # | Luồng command Python                                                     | Kết quả cuối                                        |
-| - | ------------------------------------------------------------------------ | --------------------------------------------------- |
-| 1 | `time.time()` → `time.ctime()`                                           | `time(sec)` → `time(string)`                        |
-| 2 | `time.time()` → `time.localtime()` / `time.gmtime()` → `time.asctime()`  | `time(sec)` → `time(tuple)` → `time(string)`        |
-| 3 | `time.time()` → `time.localtime()` / `time.gmtime()` → `time.strftime()` | `time(sec)` → `time(tuple)` → `time(format string)` |
-| 4 | `time.strptime()` → `time.mktime()`                                      | `time(format string)` → `time(tuple)` → `time(sec)` |
-"""
+# tichs = time.time()#tichs == tích tắc (đồng hồ quả lắc) = sec
+nowtime = time.localtime()
+
+time_format = time.strftime(
+'%Y "năm 4 chữ số" - '
+'%y "năm 2 chữ số" - '
+'%m "tháng dạng số" - '
+'%B "tên tháng đầy đủ" - '
+'%b "tên tháng viết tắt" - '
+'%d "ngày trong tháng" - '
+'%A "thứ đầy đủ trong tuần" - '
+'%a "thứ viết tắt" - '
+'%H "giờ hệ 24h" - '
+'%I "giờ hệ 12h" - '
+'%p "AM hoặc PM" - '
+'%M "phút" - '
+'%S "giây" - '
+'%z "độ lệch múi giờ so với UTC" - '
+'%Z "tên múi giờ" - '
+'%j "ngày thứ bao nhiêu trong năm" - '
+'%U "số tuần trong năm (tuần bắt đầu chủ nhật)" - '
+'%W "số tuần trong năm (tuần bắt đầu thứ hai)" - '
+'%c "ngày giờ đầy đủ theo hệ thống" - '
+'%x "định dạng ngày" - '
+'%X "định dạng giờ" - '
+'%% "ký tự phần trăm"',
+nowtime
+)
+
+print(time_format)
+print(type(time_format))
+print("\n")
+
+print(nowtime)
+print(type(nowtime))
+# time_tuple = time.strptime(time_format)
+# print(time_tuple)
+# print(type(time_tuple))
