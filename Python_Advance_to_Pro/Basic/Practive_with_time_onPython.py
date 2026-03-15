@@ -4,6 +4,7 @@ import sys
 import time
 from _datetime import date
 from _datetime import datetime
+from datetime import timedelta
 
 sys.stdout.reconfigure(encoding='utf-8') #terminal Python use UTF-8 để print, nên các ký tự tiếng Việt ko còn gây lỗi UnicodeEncodeError nữa
 
@@ -134,7 +135,7 @@ sys.stdout.reconfigure(encoding='utf-8') #terminal Python use UTF-8 để print,
 ##muốn lấy cả day month years, hours minutes sec ....??
 ## use datetime.now()
 
-dayss = datetime.now()
+# dayss = datetime.now()
 # print(dayss)
 # print(type(dayss))
 
@@ -163,32 +164,57 @@ dayss = datetime.now()
 # print(type(giay))
 
 
+########################
+#######dayss.strftime()
+##year: %y, %Y
+##month: %m, %B, %b
+##day: %d
+##weekday: %A, %a
+##day/month/year: %D, %x
 
-##dayss.strftime()
+########################
+## hours: %H, %I(12) 
+## minute: %M
+## second: %S
+## cho biết giờ: %X
+## AM PM : %p
+# dayss = datetime.now()
 
-homnay = (
-    f"{dayss.strftime('%Y')} \"năm 4 chữ số\" - \n"
-    f"{dayss.strftime('%y')} \"năm 2 chữ số\" - \n"
-    f"{dayss.strftime('%m')} \"tháng dạng số\" - \n"
-    f"{dayss.strftime('%B')} \"tên tháng đầy đủ\" - \n"
-    f"{dayss.strftime('%b')} \"tên tháng viết tắt\" - \n"
-    f"{dayss.strftime('%d')} \"ngày trong tháng\" - \n"
-    f"{dayss.strftime('%A')} \"thứ đầy đủ trong tuần\" - \n"
-    f"{dayss.strftime('%a')} \"thứ viết tắt\" - \n"
-    f"{dayss.strftime('%H')} \"giờ hệ 24h\" - \n"
-    f"{dayss.strftime('%I')} \"giờ hệ 12h\" - \n"
-    f"{dayss.strftime('%p')} \"AM hoặc PM\" - \n"
-    f"{dayss.strftime('%M')} \"phút\" - \n"
-    f"{dayss.strftime('%S')} \"giây\" - \n"
-    f"{dayss.strftime('%z')} \"độ lệch múi giờ so với UTC\" - \n"
-    f"{dayss.strftime('%Z')} \"tên múi giờ\" - \n"
-    f"{dayss.strftime('%j')} \"ngày thứ bao nhiêu trong năm\" - \n"
-    f"{dayss.strftime('%U')} \"số tuần trong năm (tuần bắt đầu chủ nhật)\" - \n"
-    f"{dayss.strftime('%W')} \"số tuần trong năm (tuần bắt đầu thứ hai)\" - \n"
-    f"{dayss.strftime('%c')} \"ngày giờ đầy đủ theo hệ thống\" - \n"
-    f"{dayss.strftime('%x')} \"định dạng ngày\" - \n"
-    f"{dayss.strftime('%X')} \"định dạng giờ\" - \n"
-    "%% \"ký tự phần trăm\""
-)
+# homnay = (
+#     f"{dayss.strftime('%Y')} \"năm 4 chữ số\" - \n"
+#     f"{dayss.strftime('%y')} \"năm 2 chữ số\" - \n"
+#     f"{dayss.strftime('%m')} \"tháng dạng số\" - \n"
+#     f"{dayss.strftime('%B')} \"tên tháng đầy đủ\" - \n"
+#     f"{dayss.strftime('%b')} \"tên tháng viết tắt\" - \n"
+#     f"{dayss.strftime('%d')} \"ngày trong tháng\" - \n"
+#     f"{dayss.strftime('%A')} \"thứ đầy đủ trong tuần\" - \n"
+#     f"{dayss.strftime('%a')} \"thứ viết tắt\" - \n"
+#     f"{dayss.strftime('%H')} \"giờ hệ 24h\" - \n"
+#     f"{dayss.strftime('%I')} \"giờ hệ 12h\" - \n"
+#     f"{dayss.strftime('%p')} \"AM hoặc PM\" - \n"
+#     f"{dayss.strftime('%M')} \"phút\" - \n"
+#     f"{dayss.strftime('%S')} \"giây\" - \n"
+#     f"{dayss.strftime('%z')} \"độ lệch múi giờ so với UTC\" - \n"
+#     f"{dayss.strftime('%Z')} \"tên múi giờ\" - \n"
+#     f"{dayss.strftime('%j')} \"ngày thứ bao nhiêu trong năm\" - \n"
+#     f"{dayss.strftime('%U')} \"số tuần trong năm (tuần bắt đầu chủ nhật)\" - \n"
+#     f"{dayss.strftime('%W')} \"số tuần trong năm (tuần bắt đầu thứ hai)\" - \n"
+#     f"{dayss.strftime('%c')} \"ngày giờ đầy đủ theo hệ thống\" - \n"
+#     f"{dayss.strftime('%x')} \"định dạng ngày\" - \n"
+#     f"{dayss.strftime('%X')} \"định dạng giờ\" - \n"
+#     "%% \"ký tự phần trăm\""
+# )
 
-print(homnay)
+# print(homnay)
+
+
+# ##########################################
+# ### X ngày nữa là đến ngày bao nhiêu??
+# ## Use timedelta(X) ng
+# dayss = datetime.now()
+# x = 150
+# daysau_xday = dayss + timedelta(x) 
+# print(f'sau x ngày là ngày : {daysau_xday}')
+
+# daytrc_xday = dayss - timedelta(x) 
+# print(f'trước x ngày là ngày : {daytrc_xday}')
