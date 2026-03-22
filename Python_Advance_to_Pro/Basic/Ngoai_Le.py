@@ -7,11 +7,22 @@
 
 ## nếu dùng ngoại lệ: run program ==>> xảy ra 1 lỗi ==>> dừng program ==>> xủ lý lỗi ==>> chạy tiếp
 
+# try: 
+#     fread = open("I_O_inPy/Eg2.txt", "r", encoding= "utf-8") ##encoding= "utf-8" cần dùng khi nếu trg file có ký tự tiếng việt sẽ ko đọc đc, và sẽ cần mã hóa về dạng tiếng việt để đọc ra thành công
+#     #fread = open("I_O_inPy/Eg.txt", "r", encoding= "utf-8")
+# except IOError:
+#     print("có lỗi mở file")
+# else:
+#     print(fread)
+#     print(fread.read(), "\n") ## read tất cả file
+
+
+
 try: 
     fread = open("I_O_inPy/Eg2.txt", "r", encoding= "utf-8") ##encoding= "utf-8" cần dùng khi nếu trg file có ký tự tiếng việt sẽ ko đọc đc, và sẽ cần mã hóa về dạng tiếng việt để đọc ra thành công
-    #fread = open("I_O_inPy/Eg.txt", "r", encoding= "utf-8")
 except IOError:
-    print("có lỗi mở file")
-else:
+    fread = open("I_O_inPy/Eg.txt", "r", encoding= "utf-8")
     print(fread)
     print(fread.read(), "\n") ## read tất cả file
+else:
+    pass
