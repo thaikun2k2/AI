@@ -25,4 +25,4 @@ except IOError:
     print(fread)
     print(fread.read(), "\n") ## read tất cả file
 else:
-    pass
+    pass###pass là bỏ qua vì đã thành công
