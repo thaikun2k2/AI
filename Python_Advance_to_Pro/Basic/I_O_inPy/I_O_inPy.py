@@ -114,5 +114,57 @@
 #### "rb++" (read, write, binary)
 
 ### w(write only) chỉ cho phép ghi ko đc phép đọc
-##"w" xóa sạch, ghi lại, có tạo mới
+##"w" xóa sạch, ghi lại. file ko tồn tại -->> có tạo file mới
+
+
+
+# hôm nay trời nắng đẹp
+# kiên trì kỷ luật
+# tự kỷ
+# tình yêu 
+# phản bội trung thành
+# hi vọng
+# tư tưởng
+# khốn cảnh
+
+
+##"w" xóa sạch, ghi lại. file ko tồn tại -->> có tạo file mới
+# fread = open("I_O_inPy/Eg.txt", "w", encoding= "utf-8")
+# fread.write("quy tac") ## xóa sạch dữ liệu cũ, ghi lại dữ liệu mới
+
+# fread = open("I_O_inPy/Eg2.txt", "w", encoding= "utf-8")
+# fread.write("quy tac") ## file Eg2 ko tồn tại -->> có tạo file mới
+
+# ##"wb"(write only, binary) xóa sạch, ghi lại. file ko tồn tại -->> có tạo file mới
+# fread = open("I_O_inPy/Eg.txt", "wb")
+# fread.write(b'quy tac\r') ## xóa sạch, ghi lại dạng binary
+
+# fread = open("I_O_inPy/Eg2.txt", "wb")
+# fread.write(b'quy tac\r') ## xóa sạch, ghi lại dạng binary
+
+
+#### w+ (read & write) # "w+"  
+# fread = open("I_O_inPy/Eg.txt", "w+", encoding= "utf-8")
+# fread.write("quy tac") ##  xóa sạch, ghi lại. file ko tồn tại -->> có tạo file mới
+# fread.seek(0) #quay lại vị trí số 0 trg file
+# print(fread.read()) ## dọc file
+
+
+# fread = open("I_O_inPy/Eg2.txt", "w+", encoding= "utf-8")
+# fread.write("quy tac") ##file ko tồn tại -->> có tạo file mới
+# fread.seek(0) #quay lại vị trí số 0 trg file
+# print(fread.read()) ## dọc file
+
+#### wb+ (read, write, binary) # "wb+"
+
+# fread = open("I_O_inPy/Eg.txt", "wb+")
+# fread.write(b'quy tac\r') ##file ko tồn tại -->> có tạo file mới
+# fread.seek(0) #quay lại vị trí số 0 trg file
+# print(fread.read()) ## dọc file
+
+
+# fread = open("I_O_inPy/Eg2.txt", "wb+")
+# fread.write(b'quy tac\r') ##file ko tồn tại -->> có tạo file mới
+# fread.seek(0) #quay lại vị trí số 0 trg file
+# print(fread.read()) ## dọc file
 
