@@ -180,13 +180,13 @@
 
 ##### a+ (read, write) ## đọc, ghi tiếp. file ko tồn tại -->> có tạo file mới
 
-# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp. file ko tồn tại -->> có tạo file mới
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
 # fread.write("quy tac") ##
 # fread.seek(0) #quay lại vị trí số 0 trg file
 # print(fread.read()) ## dọc file
 
 
-# fread = open("I_O_inPy/Eg2.txt", "a+", encoding= "utf-8")##   ghi tiếp. file ko tồn tại -->> có tạo file mới
+# fread = open("I_O_inPy/Eg2.txt", "a+", encoding= "utf-8")##   ghi tiếp,đọc. file ko tồn tại -->> có tạo file mới
 # fread.write("quy tac") ##file ko tồn tại -->> có tạo file mới
 # fread.seek(0) #quay lại vị trí số 0 trg file
 # print(fread.read()) ## dọc file
@@ -211,3 +211,33 @@
 # fread.write(b'quy tac\r') ##
 # fread.seek(0) #quay lại vị trí số 0 trg file
 # print(fread.read()) ## dọc file
+
+
+
+
+#################---------- kiểm tra 1 số thuộc tính và phương thức của đối tượng file
+
+#fread.closed ==> true nếu file đã đc đóng 
+
+
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
+# fread.seek(0) #quay lại vị trí số 0 trg file
+# print(fread.read()) ## dọc file
+
+# fread.close()
+# print(fread.closed) ##trả về true vì đã đóng file, nếu trả về false thì là file chưa đóng
+
+
+# ## fread.mode ==>> access mode
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
+# print(fread.mode) ##trả về a+ là chế độ đang mở file
+
+# ## fread.name ==>> name file
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
+# print(fread.name) ## tên file
+
+
+
+#########-----------đặt lại tên
+
+
