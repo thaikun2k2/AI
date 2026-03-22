@@ -297,11 +297,11 @@
 
 
 
-##### (fread.readlines() read nhiều dòng tạo thành 1 list
-fread = open("I_O_inPy/Eg.txt", "a+", encoding="utf-8")#
-fread.seek(0) #quay lại vị trí số 0 trg file
-a = fread.readlines()# read nhiều dòng tạo thành 1 list
-print(a)
+# ##### (fread.readlines() read nhiều dòng tạo thành 1 list
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding="utf-8")#
+# fread.seek(0) #quay lại vị trí số 0 trg file
+# a = fread.readlines()# read nhiều dòng tạo thành 1 list
+# print(a)
 
-for i in a:
-    print(i)
+# for i in a:
+#     print(i)
