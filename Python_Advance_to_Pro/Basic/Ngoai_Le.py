@@ -27,6 +27,10 @@
 #     pass###pass là bỏ qua vì đã thành công
 
 
+##--==>> nếu có nhiều loại lỗi khác nhau ==>> có nhiều ngoại lệ
+##--==>> ngoại lệ: đưa ra phương án xử lý lỗi ==>> tốn time, code dài, tiêu tốn nhiều bộ nhớ 
+
+##-===>>>>>> để kết hợp ưu điểm của ngoại lệ và ko ngoại lệ
 
 
 
