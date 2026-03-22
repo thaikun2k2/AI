@@ -279,3 +279,29 @@
 
 
 
+# ####os.rmdir("old folder")         ###xóa folder remove directory
+# import os
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
+# fread.close()
+# os.rmdir("I_O_inPy/new")         ###xóa folder remove directory
+
+
+
+
+# ##### (fread.readline() read 1 dòng
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding="utf-8")#
+# fread.seek(0) #quay lại vị trí số 0 trg file
+# print(fread.readline())# read có xuống dòng nhưng chỉ read 1 dòng
+# print(fread.readline())# read có xuống dòng nhưng chỉ read 1 dòng
+
+
+
+
+##### (fread.readlines() read nhiều dòng tạo thành 1 list
+fread = open("I_O_inPy/Eg.txt", "a+", encoding="utf-8")#
+fread.seek(0) #quay lại vị trí số 0 trg file
+a = fread.readlines()# read nhiều dòng tạo thành 1 list
+print(a)
+
+for i in a:
+    print(i)
