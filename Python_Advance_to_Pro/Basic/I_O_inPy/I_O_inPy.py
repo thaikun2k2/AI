@@ -238,6 +238,44 @@
 
 
 
-#########-----------đặt lại tên
+#########-----------đặt lại tên file
+# ## os rename ("I_O_inPy/Eg.txt", "I_O_inPy/Eg123.txt")
+# import os
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
+# fread.close()
+
+# os.rename("I_O_inPy/Eg.txt", "I_O_inPy/Eg.txt")
+
+
+
+
+##os.remove("I_O_inPy/Eg.txt")# ==>xóa file
+
+# import os
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
+# fread.close()
+
+# os.remove("I_O_inPy/Eg11.txt")# ==>xóa file
+
+
+
+
+##os.mkdir("I_O_inPy/new") ##==> tạo thư mục mới. mkdir=make directory
+# import os
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
+# fread.close()
+# os.mkdir("I_O_inPy/new") ##==> tạo thư mục mới. mkdir=make directory
+
+
+
+
+
+
+# ##print(os.getcwd())## hiển thị đường dẫn vào thư mục hiện tại, getcwd = get current work directory
+# import os
+# fread = open("I_O_inPy/Eg.txt", "a+", encoding= "utf-8")##   ghi tiếp, đọc. file ko tồn tại -->> có tạo file mới
+# fread.close()
+# print(os.getcwd())## hiển thị đường dẫn vào thư mục hiện tại 
+
 
 
