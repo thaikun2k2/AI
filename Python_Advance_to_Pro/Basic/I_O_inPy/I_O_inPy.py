@@ -128,14 +128,14 @@
 # khốn cảnh
 
 
-##"w" xóa sạch, ghi lại. file ko tồn tại -->> có tạo file mới
+##"w" xóa sạch, đọc lại. file ko tồn tại -->> có tạo file mới
 # fread = open("I_O_inPy/Eg.txt", "w", encoding= "utf-8")
 # fread.write("quy tac") ## xóa sạch dữ liệu cũ, ghi lại dữ liệu mới
 
 # fread = open("I_O_inPy/Eg2.txt", "w", encoding= "utf-8")
 # fread.write("quy tac") ## file Eg2 ko tồn tại -->> có tạo file mới
 
-# ##"wb"(write only, binary) xóa sạch, ghi lại. file ko tồn tại -->> có tạo file mới
+# ##"wb"(write only, binary) xóa sạch, đọc lại. file ko tồn tại -->> có tạo file mới
 # fread = open("I_O_inPy/Eg.txt", "wb")
 # fread.write(b'quy tac\r') ## xóa sạch, ghi lại dạng binary
 
@@ -144,26 +144,26 @@
 
 
 #### w+ (read & write) # "w+"  
-# fread = open("I_O_inPy/Eg.txt", "w+", encoding= "utf-8")
+# fread = open("I_O_inPy/Eg.txt", "w+", encoding= "utf-8") ##  xóa sạch, đọc, ghi lại. file ko tồn tại -->> có tạo file mới
 # fread.write("quy tac") ##  xóa sạch, ghi lại. file ko tồn tại -->> có tạo file mới
 # fread.seek(0) #quay lại vị trí số 0 trg file
 # print(fread.read()) ## dọc file
 
 
-# fread = open("I_O_inPy/Eg2.txt", "w+", encoding= "utf-8")
+# fread = open("I_O_inPy/Eg2.txt", "w+", encoding= "utf-8") ##  xóa sạch, đọc, ghi lại. file ko tồn tại -->> có tạo file mới
 # fread.write("quy tac") ##file ko tồn tại -->> có tạo file mới
 # fread.seek(0) #quay lại vị trí số 0 trg file
 # print(fread.read()) ## dọc file
 
 #### wb+ (read, write, binary) # "wb+"
 
-# fread = open("I_O_inPy/Eg.txt", "wb+")
+# fread = open("I_O_inPy/Eg.txt", "wb+")##  xóa sạch, đọc lại dạng binary. file ko tồn tại -->> có tạo file mới
 # fread.write(b'quy tac\r') ##file ko tồn tại -->> có tạo file mới
 # fread.seek(0) #quay lại vị trí số 0 trg file
 # print(fread.read()) ## dọc file
 
 
-# fread = open("I_O_inPy/Eg2.txt", "wb+")
+# fread = open("I_O_inPy/Eg2.txt", "wb+")##  xóa sạch, đọc lại dạng binary. file ko tồn tại -->> có tạo file mới
 # fread.write(b'quy tac\r') ##file ko tồn tại -->> có tạo file mới
 # fread.seek(0) #quay lại vị trí số 0 trg file
 # print(fread.read()) ## dọc file
