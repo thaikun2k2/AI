@@ -9,7 +9,7 @@
 
 
 #Trường hợp khác cấp vs file chính (khác 1 folder) ->> add đường dẫn file module vào system
-
+#but py chỉ import đc các file cùng cấp or các file hệ thống
 
 
 
@@ -45,8 +45,53 @@
 
 #########--------C3: from Name_module import*
 
-from Def_ModuleonPy import*
+# from Def_ModuleonPy import*
+# x = giaithua(3)
+# y = sum2numbers(3, 5)
+
+# print(x)
+# print(y)
+
+#########--------C3: from Name_module import*
+
+
+
+
+
+
+
+
+
+#Eg: difficult folder 
+
+# import os 
+# path_module = os.path.abspath(os.path.join("Module")) #thêm đường dẫn đến thư mục
+# print(path_module) ## in đường dẫn đến thư mục
+
+# import os ,sys
+# path_module = os.path.abspath(os.path.join("Module")) #thêm đường dẫn đến thư mục
+# print(path_module, "\n") ## in đường dẫn đến thư mục
+# sys.path.append(path_module)
+# s = sys.path
+# for i in s:
+#     print(i)
+
+
+#Ví dụ: Thư mục khó (khác cấp)
+# Import các module cần thiết để xử lý đường dẫn
+import os ,sys
+# Tạo đường dẫn tuyệt đối đến thư mục "Module"
+script_dir = os.path.dirname(__file__)
+path_module = os.path.join(script_dir, "Module")
+# In đường dẫn để kiểm tra
+print(path_module, "\n") ## in đường dẫn đến thư mục
+# Thêm đường dẫn vào sys.path để Python có thể import module từ đó
+sys.path.append(path_module)
+# Import các hàm từ module Def_module trong thư mục Module
+from Def_module import giaithua, sum2numbers
+# Gọi hàm giaithua với tham số 3
 x = giaithua(3)
+# Gọi hàm sum2numbers với tham số 3 và 5
 y = sum2numbers(3, 5)
 
 print(x)
