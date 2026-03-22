@@ -5,8 +5,7 @@
 ## Trg python: 1 ngoại lệ là 1 đối tượng, đại diện cho 1 lỗi
 ##Bình thường: run program ==>> xảy ra 1 lỗi ==>> báo lỗi ==>> kết thúc program
 
-## nếu dùng ngoại lệ: run program ==>> xảy ra 1 lỗi ==>> dừng program ==>> xủ lý lỗi ==>> chạy tiếp
-
+## nếu dùng ngoại lệ: run program ==>> xảy ra 1 lỗi ==>> dừng program ==>> xủ lý lỗi ==>> chạy tiếp program
 # try: 
 #     fread = open("I_O_inPy/Eg2.txt", "r", encoding= "utf-8") ##encoding= "utf-8" cần dùng khi nếu trg file có ký tự tiếng việt sẽ ko đọc đc, và sẽ cần mã hóa về dạng tiếng việt để đọc ra thành công
 #     #fread = open("I_O_inPy/Eg.txt", "r", encoding= "utf-8")
@@ -18,11 +17,18 @@
 
 
 
-try: 
-    fread = open("I_O_inPy/Eg2.txt", "r", encoding= "utf-8") ##encoding= "utf-8" cần dùng khi nếu trg file có ký tự tiếng việt sẽ ko đọc đc, và sẽ cần mã hóa về dạng tiếng việt để đọc ra thành công
-except IOError:
-    fread = open("I_O_inPy/Eg.txt", "r", encoding= "utf-8")
-    print(fread)
-    print(fread.read(), "\n") ## read tất cả file
-else:
-    pass###pass là bỏ qua vì đã thành công
+# try: 
+#     fread = open("I_O_inPy/Eg2.txt", "r", encoding= "utf-8") ##encoding= "utf-8" cần dùng khi nếu trg file có ký tự tiếng việt sẽ ko đọc đc, và sẽ cần mã hóa về dạng tiếng việt để đọc ra thành công
+# except IOError:
+#     fread = open("I_O_inPy/Eg.txt", "r", encoding= "utf-8")
+#     print(fread)
+#     print(fread.read(), "\n") ## read tất cả file
+# else:
+#     pass###pass là bỏ qua vì đã thành công
+
+
+
+
+
+
+
