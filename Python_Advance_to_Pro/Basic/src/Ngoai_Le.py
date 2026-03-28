@@ -137,8 +137,41 @@ TypeError: lỗi kiểu dữ liệu
 #     print("lỗi kiểu dữ liệu")
 
 
+"""
+###khi thực hiện câu lệnh sau: sẽ ko bt nó là lỗi gì và sẽ có câu lệnh hiển thị lỗi
+
+try: 
+    khối lệnh nghi ngờ có lỗi
+except:
+    phương án xử lý
+    sys.exc_info() ## biết dcd lỗi xảy ra là lỗi gì
 
 
+"""
+import sys, traceback
+
+try:
+    x = 2 + "d"
+except:
+    print("có lỗi đã xảy ra")
+    print(sys.exc_info(),"\n")
+
+try: 
+    x = int("bcd")
+except:
+    a = sys.exc_info()
+    print("có lỗi %s xảy ra\n"  %(a[0]))
+
+
+# try:
+#     a = int(input("Nhập vào 1 số nguyên trong khoảng từ 1-->10: "))
+#     if a < 1 or a > 10:
+#         "kích hoạt ngoại lệ"
+#         thongtinloi = "lỗi nhập số %s nằm trong khoảng ngoài khoảng từ 1 --> 10:" %(a)
+#         raise Exception(thongtinloi)
+# finally:
+#     print("cần nhập vào đúng số trong khoảng from 1 to 10: ")
+#     print(sys.exc_info())
 
 
 
