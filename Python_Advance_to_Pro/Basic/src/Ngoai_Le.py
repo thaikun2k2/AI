@@ -59,9 +59,14 @@ ZeroDivisionError: lỗi không chia được cho 0
 ValueError: lỗi về mặt giá trị
 
 ImportError: lỗi import cái ko xác định
+
+IndexError: lỗi không có giá trị
+
+TypeError: lỗi kiểu dữ liệu
 """
 
 # ##eg:
+###ZeroDivisionError: lỗi không chia được cho 0
 # try: 
 #     a = 36
 #     b = 0
@@ -72,7 +77,7 @@ ImportError: lỗi import cái ko xác định
 # print("Python")
 
 
-
+###ValueError: lỗi về mặt giá trị
 # try: 
 #     a = 36
 #     b = int("a")
@@ -81,9 +86,47 @@ ImportError: lỗi import cái ko xác định
 #     print("xảy ra lỗi value giữa kiểu dữ liệu của các biến\n")
 
 
+###ImportError: lỗi import cái ko xác định
 # try:
 #     from math import abcd
 # except ImportError:
 #     print("lỗi import không xác định")
 
 
+
+###IndexError: lỗi không có giá trị
+# try: 
+#     a = ["1"]
+#     e = a[3]
+# except IndexError:
+#     print(" lỗi không có giá trị")
+
+
+##eg:
+# try: 
+#     from math import abcd
+#     a = 36
+#     b = 0
+#     x = a/b
+#     c = 36
+#     d = int("a")
+#     y = c/d
+#     j = ["a"]
+#     e = j[3]
+# except ZeroDivisionError:
+#     print("xảy ra lỗi không chia được cho 0\n")
+# except ValueError:
+#     print("xảy ra lỗi value giữa kiểu dữ liệu của các biến\n")
+# except ImportError:
+#     print("lỗi import không xác định")
+# except IndexError:
+#     print(" lỗi không có giá trị")
+
+# print("Python")
+
+###TypeError: lỗi kiểu dữ liệu
+# try:
+#     a = 36
+#     e = a[12]
+# except TypeError:
+#     print("lỗi kiểu dữ liệu")
