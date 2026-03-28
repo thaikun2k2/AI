@@ -104,9 +104,96 @@ project/
 
 ---
 
+## � Cách sử dụng Miniconda
+
+### 📍 Vị trí Miniconda
+```
+C:\Users\ADMIN\miniconda3
+```
+
+### 🚀 Tạo Môi trường mới
+
+```bash
+# Tạo môi trường với Python 3.11
+conda create -n my_env python=3.11
+
+# Tạo môi trường với Python 3.12
+conda create -n my_env python=3.12 -y
+```
+
+### 🔄 Quản lý Môi trường
+
+```bash
+# Liệt kê tất cả các môi trường
+conda env list
+
+# Kích hoạt môi trường
+conda activate my_env
+
+# Deactivate môi trường
+conda deactivate
+
+# Xóa môi trường
+conda remove -n my_env --all
+```
+
+### 📦 Cài đặt Packages
+
+```bash
+# Cài package từ conda
+conda install numpy pandas matplotlib
+
+# Cài package từ pip
+pip install requests beautifulsoup4
+
+# Cài từ requirements.txt
+pip install -r requirements.txt
+```
+
+### 💡 Ví dụ Workflow
+
+```bash
+# 1. Tạo môi trường
+conda create -n ai_project python=3.11 -y
+
+# 2. Kích hoạt
+conda activate ai_project
+
+# 3. Cài các package cần thiết
+pip install numpy pandas scikit-learn matplotlib
+
+# 4. Chạy code
+python main.py
+
+# 5. Deactivate khi xong
+conda deactivate
+```
+
+### 🎯 Thực hành từ thư mục `src`
+
+```bash
+# Di chuyển đến thư mục src
+cd C:\Users\ADMIN\Documents\GitHub\Series_AI\AI\Python_Advance_to_Pro\Basic\src
+
+# Tạo môi trường
+conda create -n basic_env python=3.11 -y
+
+# Kích hoạt
+conda activate basic_env
+
+# Cài pip packages
+pip install -r ../requirements.txt
+
+# Chạy file Python
+python Comprehension.py
+```
+
+---
+
 ## 📌 Notes
 
 > Nếu chưa cài Python, lệnh `python --version` có thể trigger cài đặt bản mặc định.
+> Miniconda đã sẵn sàng sử dụng từ bất kỳ đường dẫn nào trên hệ thống.
 
 ---
 
