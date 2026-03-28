@@ -245,18 +245,23 @@ khối lệnh 3 ## đc thực hiện khi "khối lệnh 1" ko có lỗi, nếu c
 # assert (a >= 1 and a <= 10), thongtinloi
 # print("câu lệnh ngoài")
 
-import sys
-try:
-    a = int(input("Nhập vào 1 số nguyên trong khoảng từ 1-->10: "))
-    if a < 1 or a > 10:
-        "kích hoạt ngoại lệ"
-        thongtinloi = "lỗi nhập số %s nằm trong khoảng ngoài khoảng từ 1 --> 10:" %(a)
-        raise Exception(thongtinloi) ##thông tin lỗi
-        "nếu đk true -->> ko tạo exception"
-except:
-    print("Có lỗi: ", thongtinloi)
 
-print("câu lệnh ngoài")
+
+
+# import sys
+# try:
+#     a = int(input("Nhập vào 1 số nguyên trong khoảng từ 1-->10: "))
+#     if a < 1 or a > 10:
+#         "kích hoạt ngoại lệ"
+#         thongtinloi = "lỗi nhập số %s nằm trong khoảng ngoài khoảng từ 1 --> 10:" %(a)
+#         raise Exception(thongtinloi) ##thông tin lỗi
+#         "nếu đk true -->> ko tạo exception"
+# except:
+#     print("Có lỗi: ", thongtinloi)
+
+# print("câu lệnh ngoài")
+
+
 
 
 # import sys
