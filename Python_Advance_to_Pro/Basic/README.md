@@ -211,11 +211,6 @@ MIT License
 
 ---
 
-# 🔥 Bonus (tối ưu README chuyên nghiệp hơn)
-
-Nếu bạn muốn nhìn “xịn” hơn (GitHub style), có thể dùng version này:
-
-```markdown
 ## 📦 Python Built-in Types & Methods
 
 | Type  | Key Methods |
