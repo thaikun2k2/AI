@@ -206,3 +206,24 @@ Feel free to fork & improve this cheatsheet 🚀
 ## 📄 License
 
 MIT License
+
+
+
+---
+
+# 🔥 Bonus (tối ưu README chuyên nghiệp hơn)
+
+Nếu bạn muốn nhìn “xịn” hơn (GitHub style), có thể dùng version này:
+
+```markdown
+## 📦 Python Built-in Types & Methods
+
+| Type  | Key Methods |
+|-------|------------|
+| 🔢 int/float | int(), float(), abs(), sqrt() |
+| 🔤 str | upper(), len(), isdigit(), center() |
+| 📋 list | list(), append(), insert(), len() |
+| 📦 tuple | tuple(), len(), max(), min() |
+| 🧩 set | add(), remove(), pop(), clear() |
+| 🗂️ dict | keys(), items(), copy(), clear() |
+| 📄 file | read(), write(), mode, name |
