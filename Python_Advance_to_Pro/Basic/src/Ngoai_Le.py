@@ -50,6 +50,35 @@ else:
 
     
 khối lệnh chắc chắn ko có lỗi
+
+
+các built in exception:
+IOError => open(file) FileNotFound
+ZeroDivisionError: lỗi không chia được cho 0
+
+ValueError: lỗi về mặt giá trị
 """
+
+##eg:
+try: 
+    a = 36
+    b = 0
+    x = a/b
+except ZeroDivisionError:
+    print("xảy ra lỗi không chia được cho 0\n")
+
+print("Python")
+
+
+
+try: 
+    a = 36
+    b = int("a")
+    x = a/b
+except ValueError:
+    print("xảy ra lỗi giá trị giữa kiểu dữ liệu của các biến\n")
+
+
+
 
 
