@@ -57,6 +57,8 @@ IOError => open(file) FileNotFound
 ZeroDivisionError: lỗi không chia được cho 0
 
 ValueError: lỗi về mặt giá trị
+
+ImportError: lỗi import cái ko xác định
 """
 
 ##eg:
@@ -76,7 +78,7 @@ try:
     b = int("a")
     x = a/b
 except ValueError:
-    print("xảy ra lỗi giá trị giữa kiểu dữ liệu của các biến\n")
+    print("xảy ra lỗi value giữa kiểu dữ liệu của các biến\n")
 
 
 
