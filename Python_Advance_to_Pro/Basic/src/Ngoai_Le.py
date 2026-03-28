@@ -52,6 +52,11 @@ else:
 khối lệnh chắc chắn ko có lỗi
 
 
+try:
+    khối lệnh nghi ngờ có lỗi
+except: ### except: tức là cứ có bất kỳ lỗi nào xảy ra thì đều thực hiện phương án xử lý lỗi
+    Phương pháp xử lý lỗi
+
 các built in exception:
 IOError => open(file) FileNotFound
 ZeroDivisionError: lỗi không chia được cho 0
@@ -130,3 +135,13 @@ TypeError: lỗi kiểu dữ liệu
 #     e = a[12]
 # except TypeError:
 #     print("lỗi kiểu dữ liệu")
+
+
+
+
+
+
+
+
+
+
