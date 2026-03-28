@@ -151,30 +151,18 @@ except:
 
 
 """
-import sys, traceback
-
-try:
-    x = 2 + "d"
-except:
-    print("có lỗi đã xảy ra")
-    print(sys.exc_info(),"\n")
-
-try: 
-    x = int("bcd")
-except:
-    a = sys.exc_info()
-    print("có lỗi %s xảy ra\n"  %(a[0]))
-
-
+# import sys, traceback
 # try:
-#     a = int(input("Nhập vào 1 số nguyên trong khoảng từ 1-->10: "))
-#     if a < 1 or a > 10:
-#         "kích hoạt ngoại lệ"
-#         thongtinloi = "lỗi nhập số %s nằm trong khoảng ngoài khoảng từ 1 --> 10:" %(a)
-#         raise Exception(thongtinloi)
-# finally:
-#     print("cần nhập vào đúng số trong khoảng from 1 to 10: ")
-#     print(sys.exc_info())
+#     x = 2 + "d"
+# except:
+#     print("có lỗi đã xảy ra")
+#     print(sys.exc_info(),"\n")
+
+# try: 
+#     x = int("bcd")
+# except:
+#     a = sys.exc_info()
+#     print("có lỗi %s xảy ra\n"  %(a[0]))
 
 
 
@@ -183,16 +171,67 @@ except:
 
 
 try: 
-    khối lệnh 1 (nghi ngờ có lỗi)
+    khối lệnh 1 (nghi ngờ có lỗi) ## luôn đc thực hiện
 except:
-    phương án xử lý
-    sys.exc_info() ## biết đc lỗi xảy ra là lỗi gì
+    phương án xử lý               ## thực hiện khi có lỗi xảy ra ở "khối lệnh 1"
+    sys.exc_info()                ## biết đc lỗi xảy ra là lỗi gì
 else:
-    khối lệnh 2
+    khối lệnh 2                   ## thực hiện khi ko có lỗi xảy ra ở "phương án xử lý"
 finally:
-    khối lệnh 3
+    khối lệnh 3                   ## luôn được thực hiện
 
 
-khối lệnh 4 ###ko liên quan đến ngoại lệ try -->> finally
+khối lệnh 4 ###ko liên quan đến ngoại lệ try -->> finally ## luôn được thực hiện vì nằm ngoài try,except
+
+"""
+
+# import sys
+# try: 
+#     x = int("4")
+# except:
+#     a = sys.exc_info()
+#     print("có lỗi %s xảy ra\n"  %(a[0]))
+# else:
+#     print("ko có lỗi xảy ra nên khối lệnh sau else đc thực hiện")
+# finally:
+#     print("khối lệnh sau finally luôn đc thực hiện\n")
+
+# print("bên ngoài luôn đc thực hiện")
+
+
+
+
+
+"""
+
+try: 
+    khối lệnh 1 (nghi ngờ có lỗi) ## luôn đc thực hiện
+finally:
+    khối lệnh 2                   ## luôn được thực hiện
+
+
+khối lệnh 3 ## đc thực hiện khi "khối lệnh 1" ko có lỗi, nếu có lỗi sẽ ko đc thực hiện
+
+"""
+
+
+
+
+# import sys
+# try:
+#     a = int(input("Nhập vào 1 số nguyên trong khoảng từ 1-->10: "))
+#     if a < 1 or a > 10:
+#         "kích hoạt ngoại lệ"
+#         thongtinloi = "lỗi nhập số %s nằm trong khoảng ngoài khoảng từ 1 --> 10:" %(a)
+#         raise Exception(thongtinloi)
+# finally:
+#     print("cần nhập vào số trong khoảng from 1 to 10: ")
+
+# print("câu lệnh ngoài")
+
+
+"""
+
+
 
 """
