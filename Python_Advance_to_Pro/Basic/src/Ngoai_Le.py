@@ -139,6 +139,9 @@ TypeError: lỗi kiểu dữ liệu
 
 """
 ###khi thực hiện câu lệnh sau: sẽ ko bt nó là lỗi gì và sẽ có câu lệnh hiển thị lỗi
+## ko bt xảy ra là lỗi gì
+## module sys
+
 
 try: 
     khối lệnh nghi ngờ có lỗi
@@ -175,6 +178,21 @@ except:
 
 
 
+"""
+##Lưu ý: Try, except bắt buộc có
 
 
+try: 
+    khối lệnh 1 (nghi ngờ có lỗi)
+except:
+    phương án xử lý
+    sys.exc_info() ## biết đc lỗi xảy ra là lỗi gì
+else:
+    khối lệnh 2
+finally:
+    khối lệnh 3
 
+
+khối lệnh 4 ###ko liên quan đến ngoại lệ try -->> finally
+
+"""
