@@ -30,9 +30,12 @@
 ##--==>> nếu có nhiều loại lỗi khác nhau ==>> có nhiều ngoại lệ
 ##--==>> ngoại lệ: đưa ra phương án xử lý lỗi ==>> tốn time, code dài, tiêu tốn nhiều bộ nhớ 
 
-##-===>>>>>> để kết hợp ưu điểm của ngoại lệ và ko ngoại lệ
+##-===có cách nào không???>>>>>> để kết hợp ưu điểm của ngoại lệ và ko ngoại lệ =>>> giải pháp đưa ra là viết code sao cho ko có lỗi xảy ra, đoạn code nào có nguy cơ sảy ra lỗi
 
 
+###########################################################################################################################
+
+####-----Cú pháp để use ngoại lệ: 
 
 
 
