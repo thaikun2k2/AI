@@ -61,26 +61,29 @@ ValueError: lỗi về mặt giá trị
 ImportError: lỗi import cái ko xác định
 """
 
-##eg:
-try: 
-    a = 36
-    b = 0
-    x = a/b
-except ZeroDivisionError:
-    print("xảy ra lỗi không chia được cho 0\n")
+# ##eg:
+# try: 
+#     a = 36
+#     b = 0
+#     x = a/b
+# except ZeroDivisionError:
+#     print("xảy ra lỗi không chia được cho 0\n")
 
-print("Python")
-
-
-
-try: 
-    a = 36
-    b = int("a")
-    x = a/b
-except ValueError:
-    print("xảy ra lỗi value giữa kiểu dữ liệu của các biến\n")
+# print("Python")
 
 
 
+# try: 
+#     a = 36
+#     b = int("a")
+#     x = a/b
+# except ValueError:
+#     print("xảy ra lỗi value giữa kiểu dữ liệu của các biến\n")
+
+
+# try:
+#     from math import abcd
+# except ImportError:
+#     print("lỗi import không xác định")
 
 
