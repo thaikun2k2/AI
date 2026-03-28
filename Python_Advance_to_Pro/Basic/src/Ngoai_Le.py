@@ -213,8 +213,26 @@ finally:
 khối lệnh 3 ## đc thực hiện khi "khối lệnh 1" ko có lỗi, nếu có lỗi sẽ ko đc thực hiện
 
 """
+# a = int(input("Nhập vào 1 số nguyên trong khoảng từ 1-->10: "))
+# if a < 1 or a > 10:
+#     "kích hoạt ngoại lệ"
+#     thongtinloi = "lỗi nhập số %s nằm trong khoảng ngoài khoảng từ 1 --> 10:" %(a)
+#     raise Exception(thongtinloi) ##thông tin lỗi
+
+# print("câu lệnh ngoài")
 
 
+import sys
+try:
+    a = int(input("Nhập vào 1 số nguyên trong khoảng từ 1-->10: "))
+    if a < 1 or a > 10:
+        "kích hoạt ngoại lệ"
+        thongtinloi = "lỗi nhập số %s nằm trong khoảng ngoài khoảng từ 1 --> 10:" %(a)
+        raise Exception(thongtinloi) ##thông tin lỗi
+except:
+    print("Có lỗi: ", thongtinloi)
+
+print("câu lệnh ngoài")
 
 
 # import sys
@@ -223,7 +241,7 @@ khối lệnh 3 ## đc thực hiện khi "khối lệnh 1" ko có lỗi, nếu c
 #     if a < 1 or a > 10:
 #         "kích hoạt ngoại lệ"
 #         thongtinloi = "lỗi nhập số %s nằm trong khoảng ngoài khoảng từ 1 --> 10:" %(a)
-#         raise Exception(thongtinloi)
+#         raise Exception(thongtinloi) ##thông tin lỗi
 # finally:
 #     print("cần nhập vào số trong khoảng from 1 to 10: ")
 
