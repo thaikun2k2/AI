@@ -36,6 +36,20 @@
 ###########################################################################################################################
 
 ####-----Cú pháp để use ngoại lệ: 
+"""
+try:
+    khối lệnh nghi ngờ có lỗi
+except lỗi 1:
+    Phương pháp xử lý lỗi 1
+except lỗi 2:
+    Phương pháp xử lý lỗi 2
+except lỗi 3:
+    Phương pháp xử lý lỗi 3
+else:
+    không có lỗi thì làm như thế này!
 
+    
+khối lệnh chắc chắn ko có lỗi
+"""
 
 
