@@ -227,10 +227,16 @@
 ################# Trừu tượng trong OOP (Abstraction)-------------------------------##################    
 
 
+################# Magic method (phương thức đặc biệt)-------------------------------##################    
 
+# class sinhvien():
+#     def __init__(self, hoten, m_sv):
+#         self.name = hoten
+#         self.msv = m_sv
+#     def __str__(self):
+#         return f"Xin chào, tôi là sinh viên {self.name} với mã sinh viên {self.msv}" # định nghĩa phương thức __str__ để trả về tên khi in object
 
-
-
+################# Magic method (phương thức đặc biệt)-------------------------------##################    
 
 
 

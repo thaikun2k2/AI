@@ -296,7 +296,17 @@ hamxx(b) ===>>> chức năng 2
 
 
 
+################# Magic method (phương thức đặc biệt)-------------------------------##################    
+# ## Magic method là các phương thức đặc biệt được định nghĩa sẵn trong Python, có tên bắt đầu và kết thúc bằng hai dấu gạch dưới (ví dụ: __init__, __str__, __add__, v.v.). Chúng cho phép chúng ta tùy chỉnh hành vi của các đối tượng khi thực hiện các phép toán hoặc khi in đối tượng, v.v. 
+# # Ví dụ, phương thức __str__ cho phép chúng ta định nghĩa cách mà đối tượng sẽ được hiển thị khi chúng ta in nó ra
+# ## Nếu chúng ta định nghĩa phương thức __str__ trong class sinhvien, thì khi chúng ta in một đối tượng của class sinhvien, Python sẽ tự động gọi phương thức __str__ để lấy chuỗi đại diện cho đối tượng đó và in ra
 
+# # tạo object (instance)
+# sv1 = sinhvien("Nguyen Van A", 123456)
+# print(sv1)  # do đã định nghĩa __str__ nên khi in object sv1 sẽ gọi đến phương thức __str__ để trả về chuỗi đại diện cho object đó
+# # ko thì sẽ có kết quả là: <__main__.sinhvien object at 0x7f8c8c8c8c8c>
+
+################# Magic method (phương thức đặc biệt)-------------------------------##################    
 
 
 
