@@ -343,37 +343,22 @@ hamxx(b) ===>>> chức năng 2
 
 
 
+### cách dùng Composition (HAS-A) ----------
+# 🔥 Composition (HAS-A) là gì?
+
+# Composition (HAS-A) trong OOP nghĩa là:
+# 👉 Một class chứa (has-a) một object của class khác bên trong nó.
+
+# Car HAS-A Engine → Xe có động cơ
+# Không phải kế thừa (IS-A), mà là sử dụng thành phần bên trong
 
 
+stu.start_stu("Nguyen Van A", 123456)
+print(stu.sinhvien.name) # truy cập thuộc tính name của object sinhvien thông
+print(stu.sinhvien.msv) # truy cập thuộc tính msv của object sinhvien thông qua object stu
 
-
+### cách dùng Composition (HAS-A) ----------
 
 
 ################# Advanced (Nâng cao)-------------------------------##################   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

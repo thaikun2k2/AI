@@ -335,14 +335,36 @@
 #         else:
 #             self.__balance = amount
 
+### cách dùng property(getter/setter) ----------
 
 
+
+### cách dùng Composition (HAS-A) ----------
+# 🔥 Composition (HAS-A) là gì?
+
+# Composition (HAS-A) trong OOP nghĩa là:
+# 👉 Một class chứa (has-a) một object của class khác bên trong nó.
+
+# Car HAS-A Engine → Xe có động cơ
+# Không phải kế thừa (IS-A), mà là sử dụng thành phần bên trong
+
+class SinhVien():
+    def start(self, hoten, m_sv):
+        self.name = hoten
+        self.msv = m_sv
+class student_db():
+    def __init__(self, sinhvien):
+        self.sinhvien = sinhvien
+    def start_stu(self, hoten, m_sv):
+        self.sinhvien.start(hoten, m_sv)
+
+sinhvien = SinhVien()
+stu = student_db(sinhvien)
+
+# stu.start_stu("Nguyen Van A", 123456)
+# print(stu.sinhvien.name) # truy cập thuộc tính name của object sinhvien thông
+# print(stu.sinhvien.msv) # truy cập thuộc tính msv của object sinhvien thông qua object stu
+
+### cách dùng Composition (HAS-A) ----------
 
 ################# Advanced (Nâng cao)-------------------------------##################    
-
-
-
-
-
-
-
