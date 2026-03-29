@@ -109,57 +109,129 @@ class sinhvien:
 
 
 
-##### Tính kế thừa trong OOP (Inheritance)
-##Class cha (parent class) và class con (child class)
-## class con sẽ kế thừa thuộc tính và phương thức của class cha
-# khi class con kế thừa từ class cha phải chỉ rõ tên class cha
-# class con có thể kế thừa 1 ph hoặc toàn bộ 
+#################Kế thừa trong OOP (Inheritance)-------------------------------##################   
 
-## class con có thể thêm thuộc tính và phương thức riêng của mình
-# Dùng từ khóa super() để phân biệt tài sản kế thừa và tài sản tự làm ra
 
-##kế thừa cành nhiều càng nhàn nhã
+# ##### Tính kế thừa trong OOP (Inheritance)
+# ##Class cha (parent class) và class con (child class)
+# ## class con sẽ kế thừa thuộc tính và phương thức của class cha
+# # khi class con kế thừa từ class cha phải chỉ rõ tên class cha
+# # class con có thể kế thừa 1 ph hoặc toàn bộ 
+
+# ## class con có thể thêm thuộc tính và phương thức riêng của mình
+# # Dùng từ khóa super() để phân biệt tài sản kế thừa và tài sản tự làm ra
+
+# ##kế thừa cành nhiều càng nhàn nhã
+
+# from my_type_OOP import*
+
+
+# ### Class Father
+# sv1 = sinhvien("Nguyen Van A", 123456)
+# # sv2 = sinhvien("Nguyen Van B", 654321)
+# # sv3 = sinhvien("Nguyen Van C", 111111)
+# # sv4 = sinhvien("Nguyen Van D", 222222)
+
+# x = sv1.diem_tb(6, 7, 8, 9, 10)
+# # y = sv2.diem_tb(5, 6, 7, 8, 9)
+# # z = sv3.diem_tb(4, 5, 6, 7, 8)
+# # w = sv4.diem_tb(3, 4, 5, 6, 7)
+
+
+# # print(sv1.name)
+# # print(sv1.msv)
+# print(f'Thông tin sinh viên 1 là: {sv1.name} có mã sinh viên là: {sv1.msv}')
+# print("Điểm trung bình của sinh viên 1 là: ", x)
+# # print(f'Thông tin sinh viên 2 là: {sv2.name} có mã sinh viên là: {sv2.msv}')
+# # print("Điểm trung bình của sinh viên 2 là: ", y)
+# # print(f'Thông tin sinh viên 3 là: {sv3.name} có mã sinh viên là: {sv3.msv}')
+# # print("Điểm trung bình của sinh viên 3 là: ", z)
+# # print(f'Thông tin sinh viên 4 là: {sv4.name} có mã sinh viên là: {sv4.msv}')
+# # print("Điểm trung bình của sinh viên 4 là: ", w)
+# print("\n")
+
+
+
+# ### Class con kế thừa từ class cha + phần của riêng nó
+# svdb1 = sinhvien_db("Nguyen Van A", 123456, "01/01/2000", "Nam")
+# print(f'Thông tin sinh viên 1 là:\n- Full name: {svdb1.name}\n- mã sinh viên là: {svdb1.msv}\n- ngày sinh là: {svdb1.birthday}\n- giới tính là: {svdb1.gender}')
+# x = svdb1.diem_tb(6, 7, 8, 9, 10)
+# print("Điểm trung bình của sinh viên 1 là: ", x)
+# x1 = svdb1.diemtong(6, 7, 8, 9, 10)
+# print("Điểm tổng của sinh viên 1 là: ", x1)
+
+#################Kế thừa trong OOP (Inheritance)-------------------------------##################   
+
+
+
+
+#################Đóng gói trong OOP (Encapsulation)-------------------------------##################    
+
+
 
 from my_type_OOP import*
 
 
-### Class Father
-sv1 = sinhvien("Nguyen Van A", 123456)
-# sv2 = sinhvien("Nguyen Van B", 654321)
-# sv3 = sinhvien("Nguyen Van C", 111111)
-# sv4 = sinhvien("Nguyen Van D", 222222)
+## đang chưa đóng gói
 
-x = sv1.diem_tb(6, 7, 8, 9, 10)
-# y = sv2.diem_tb(5, 6, 7, 8, 9)
-# z = sv3.diem_tb(4, 5, 6, 7, 8)
-# w = sv4.diem_tb(3, 4, 5, 6, 7)
-
-
-# print(sv1.name)
-# print(sv1.msv)
-print(f'Thông tin sinh viên 1 là: {sv1.name} có mã sinh viên là: {sv1.msv}')
-print("Điểm trung bình của sinh viên 1 là: ", x)
-# print(f'Thông tin sinh viên 2 là: {sv2.name} có mã sinh viên là: {sv2.msv}')
-# print("Điểm trung bình của sinh viên 2 là: ", y)
-# print(f'Thông tin sinh viên 3 là: {sv3.name} có mã sinh viên là: {sv3.msv}')
-# print("Điểm trung bình của sinh viên 3 là: ", z)
-# print(f'Thông tin sinh viên 4 là: {sv4.name} có mã sinh viên là: {sv4.msv}')
-# print("Điểm trung bình của sinh viên 4 là: ", w)
-print("\n")
+# sv1 = sinhvien("Nguyen Van A", 123456)
+# sv1.diem_max = 20
+# x = sv1.diem_tb(6, 7, 8, 9, 10, 12)
 
 
 
-### Class con kế thừa từ class cha + phần của riêng nó
-svdb1 = sinhvien_db("Nguyen Van A", 123456, "01/01/2000", "Nam")
-print(f'Thông tin sinh viên 1 là:\n- Full name: {svdb1.name}\n- mã sinh viên là: {svdb1.msv}\n- ngày sinh là: {svdb1.birthday}\n- giới tính là: {svdb1.gender}')
-x = svdb1.diem_tb(6, 7, 8, 9, 10)
-print("Điểm trung bình của sinh viên 1 là: ", x)
-x1 = svdb1.diemtong(6, 7, 8, 9, 10)
-print("Điểm tổng của sinh viên 1 là: ", x1)
+# print(f'Thông tin sinh viên 1 là: {sv1.name} có mã sinh viên là: {sv1.msv}')
+# print(x)
+
+
+## đang ko đc đóng gói vì sv1.diem_max = 20 đã thay đổi đc giá trị của diem_max trong class sinhvien
+## dẫn đến việc điểm 12 đã được tính vào điểm trung bình dù nó không hợp lệ (vượt quá điểm tối đa là 10)
+## để khắc phục vấn đề này, chúng ta cần đóng gói thuộc tính diem_max
+
+
+########### Đóng gói (Encapsulation)
+## Khi đóng gói thì sẽ ko thể thay đổi đc giá trị từ bên ngoài class, chỉ có thể thay đổi giá trị của diem_max thông qua phương thức của class sinhvien
+## Điều này giúp bảo vệ dữ liệu và đảm bảo tính toàn vẹn của đối tượng sinh
 
 
 
 
+# sv1 = sinhvien("Nguyen Van A", 123456)
+# sv1.__diem_max = 20 ## thuộc tính đã được đóng gói, không thể can thiệp trực tiếp từ bên ngoài class
+# x = sv1.diem_tb(6, 7, 8, 9, 10, 12)
+
+
+
+# print(f'Thông tin sinh viên 1 là: {sv1.name} có mã sinh viên là: {sv1.msv}')
+# print(x)
+
+##Mục đích vc đóng gói là: để bảo vệ 1 số thuộc tính quan trong của đối tượng, tránh việc bị thay đổi giá trị từ bên ngoài class
+#  đảm bảo tính toàn vẹn của dữ liệu và giúp kiểm soát cách thức truy cập
+
+
+
+
+# ##sau khi đã thêm biến thay đổi từ bên trong của đóng gói 
+# sv1 = sinhvien("Nguyen Van A", 123456)
+# #sv1.__diem_max = 20 ## vẫn sẽ ko thay đổi đc
+
+# sv1.set_diem_max(20) ## thay đổi giá trị của diem_max thông qua phương thức set_diem_max của class sinhvien
+# x = sv1.diem_tb(6, 7, 8, 9, 10, 12)
+
+
+
+# print(f'Thông tin sinh viên 1 là: {sv1.name} có mã sinh viên là: {sv1.msv}')
+# print(x)
+
+########=====>>>>>>để thay đổi thuộc tính đã đc đóng gói thì phải thay đổi từ bên trong đối tượng
+########=====>>>>>>ko thể thay đổi đc từ bên ngoài đối tượng
+
+
+#################Đóng gói trong OOP (Encapsulation)-------------------------------##################    
+
+
+
+################# Đa hình trong OOP (Polymorphism)-------------------------------##################    
 
 
 
@@ -173,3 +245,16 @@ print("Điểm tổng của sinh viên 1 là: ", x1)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+################# Đa hình trong OOP (Polymorphism)-------------------------------##################    
