@@ -70,9 +70,11 @@
 
 
 
-#in số ngày giữa 2 sự kiện
-import datetime
-sk1 = datetime.date(2026,4,30)
-sk2 = datetime.date(2026,3,30)
-delta = sk1 - sk2
-print(delta)
+# #in số ngày giữa 2 sự kiện
+# import datetime
+# sk1 = datetime.date(2026,4,30)
+# sk2 = datetime.date(2026,3,30)
+# delta = sk1 - sk2
+# print(delta)
+
+
