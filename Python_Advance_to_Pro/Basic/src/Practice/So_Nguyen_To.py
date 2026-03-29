@@ -13,4 +13,5 @@ def check_nguyen_to(n):
         else:
             print(f'{n} là số nguyên tố')
 
-check_nguyen_to(n)
+for i in range(n):
+    check_nguyen_to(i)
