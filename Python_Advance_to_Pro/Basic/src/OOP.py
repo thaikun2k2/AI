@@ -293,24 +293,63 @@ hamxx(b) ===>>> chức năng 2
 
 ################# Trừu tượng trong OOP (Abstraction)-------------------------------##################    
 
+################# Advanced (Nâng cao)-------------------------------##################   
 
 
-
-################# Magic method (phương thức đặc biệt)-------------------------------##################    
+### Magic method (phương thức đặc biệt)------ 
 # ## Magic method là các phương thức đặc biệt được định nghĩa sẵn trong Python, có tên bắt đầu và kết thúc bằng hai dấu gạch dưới (ví dụ: __init__, __str__, __add__, v.v.). Chúng cho phép chúng ta tùy chỉnh hành vi của các đối tượng khi thực hiện các phép toán hoặc khi in đối tượng, v.v. 
 # # Ví dụ, phương thức __str__ cho phép chúng ta định nghĩa cách mà đối tượng sẽ được hiển thị khi chúng ta in nó ra
 # ## Nếu chúng ta định nghĩa phương thức __str__ trong class sinhvien, thì khi chúng ta in một đối tượng của class sinhvien, Python sẽ tự động gọi phương thức __str__ để lấy chuỗi đại diện cho đối tượng đó và in ra
 
-# # tạo object (instance)
-# sv1 = sinhvien("Nguyen Van A", 123456)
+# sv1 = sinhvien("Nguyen Van A", 123456) # tạo object (instance)
 # print(sv1)  # do đã định nghĩa __str__ nên khi in object sv1 sẽ gọi đến phương thức __str__ để trả về chuỗi đại diện cho object đó
 # # ko thì sẽ có kết quả là: <__main__.sinhvien object at 0x7f8c8c8c8c8c>
 
-################# Magic method (phương thức đặc biệt)-------------------------------##################    
+### Magic method (phương thức đặc biệt)------ 
+
+### class method & static method ------ 
+
+# sv1 = sinhvien("Nguyen Van A", 123456)
+
+# print(f'{sv1.get_count()}') 
+# # class method get_count để đếm số lượng đối tượng đã được tạo ra từ class sinhvien
+
+# print(f'{sv1.is_valid_msv(123456)}') 
+# # static method is_valid_msv để kiểm tra xem mã sinh viên có hợp lệ hay không (ví dụ: mã sinh viên phải là một số có 6 chữ số)
+
+### class method & static method ------ 
 
 
 
 
+### cách dùng property(getter/setter) ----------
+# sv1 = sinhvien("Nguyen Van A", 123456)
+# sv1.score = 9 # setter: gán giá trị cho thuộc tính score
+# print(sv1.score) # getter: truy cập giá trị của thuộc tính score
+
+# sv1.score = -1 # setter: gán giá trị cho thuộc tính score, nhưng do đã có kiểm tra trong setter nên sẽ không gán được giá trị -1 vào score
+# print(sv1.score) # getter: truy cập giá trị của thuộc tính score, vẫn sẽ trả về 9 vì giá trị -1 đã bị setter từ chối gán vào score
+
+
+
+# acc = Account("Thai", 1000)
+# #acc.balance = 500     # OK
+# print(acc.balance)    # Output: 500
+# acc.balance = -100     # ❌ ValueError
+# acc.balance = "abc"    # ❌ TypeError
+
+### cách dùng property(getter/setter) ----------
+
+
+
+
+
+
+
+
+
+
+################# Advanced (Nâng cao)-------------------------------##################   
 
 
 

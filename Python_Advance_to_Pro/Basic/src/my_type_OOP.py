@@ -227,7 +227,13 @@
 ################# Trừu tượng trong OOP (Abstraction)-------------------------------##################    
 
 
-################# Magic method (phương thức đặc biệt)-------------------------------##################    
+
+################# Advanced (Nâng cao)-------------------------------##################    
+
+
+### Magic method (phương thức đặc biệt)------ 
+##Magic Methods = cách bạn “điều khiển hành vi của object trong Python”
+
 
 # class sinhvien():
 #     def __init__(self, hoten, m_sv):
@@ -236,7 +242,103 @@
 #     def __str__(self):
 #         return f"Xin chào, tôi là sinh viên {self.name} với mã sinh viên {self.msv}" # định nghĩa phương thức __str__ để trả về tên khi in object
 
-################# Magic method (phương thức đặc biệt)-------------------------------##################    
+### Magic method (phương thức đặc biệt)------ 
+
+
+
+
+### class method & static method ------ 
+# 👉 “Khác nhau giữa classmethod và staticmethod là gì?????????”
+# Class method nhận class (cls) và thường dùng để thao tác với class-level data,
+# trong khi static method không phụ thuộc vào class hay instance,
+# chỉ là một hàm tiện ích đặt trong class để tổ chức code tốt hơn.
+
+
+
+# @classmethod
+
+# Nhận tham số đầu tiên là cls (lớp hiện tại)
+# Thích hợp để thao tác dữ liệu cấp lớp (class variables)
+# Có thể tạo instance từ class, kế thừa đúng (subclass vẫn xử lý cls chính xác)
+
+# @staticmethod
+
+# Không nhận self hoặc cls (không “biết” class/instance)
+# Cơ bản chỉ là hàm tiện ích đặt trong class để tổ chức code
+# Không truy cập thuộc tính class hoặc instance trừ khi truyền rõ ràng
+
+
+
+# class sinhvien():
+#     count = 0
+#     def __init__(self, hoten, m_sv):
+#         self.name = hoten
+#         self.msv = m_sv
+#         sinhvien.count += 1 # tăng biến đếm mỗi khi có instance mới được tạo ra
+
+#     @classmethod
+#     def get_count(cls): # class method get_count để đếm số lượng đối tượng đã được tạo ra từ class sinhvien
+#         return cls.count # trả về số lượng instance đã được tạo ra
+    
+
+#     @staticmethod   
+#     def is_valid_msv(msv): # static method is_valid_msv để kiểm tra xem mã sinh viên có hợp lệ hay không
+#         return isinstance(msv, int) and msv > 0 # kiểm tra xem mã sinh viên có phải là số nguyên dương hay không
+    
+### class method & static method ------ 
+
+### cách dùng property(getter/setter) ----------
+## dùng property để tạo getter và setter cho thuộc tính __score,
+#  giúp chúng ta có thể truy cập và thay đổi giá trị của __score một cách an toàn từ bên ngoài class,
+# đồng thời kiểm tra tính hợp lệ của giá trị khi thiết lập điểm mới.
+## lưu ý: khi dùng property phải có đủ cả getter và setter,
+#  nếu thiếu một trong hai thì sẽ ko thể truy cập hoặc thay đổi giá trị của thuộc tính đó từ bên ngoài class được nữa
+# class sinhvien():
+#     def __init__(self, hoten, m_sv):
+#         self.name = hoten
+#         self.msv = m_sv
+#         self.__score = 0
+    
+#     @property
+#     def score(self):
+#         return self.__score # getter method để truy cập giá trị của thuộc tính __score từ bên ngoài class
+    
+#     @score.setter
+#     def score(self, value):
+#         if 0 <= value <= 10: # setter method để thiết lập giá trị cho thuộc tính __score từ bên ngoài class, đồng thời kiểm tra xem giá trị có hợp lệ hay không
+#             self.__score = value
+#         else:
+#             print("Điểm phải nằm trong khoảng từ 0 đến 10.")
+
+
+### cách dùng property(getter/setter) ----------
+
+
+
+
+# class Account:
+#     def __init__(self, owner, balance=0):
+#         self.owner = owner
+#         self.__balance = balance
+
+#     @property
+#     def balance(self):
+#         return self.__balance
+
+#     @balance.setter
+#     def balance(self, amount):
+#         if not isinstance(amount, (int, float)):
+#             raise TypeError("Balance phải là số")
+#         if amount < 0:
+#             raise ValueError("Số dư không thể âm")
+
+#         else:
+#             self.__balance = amount
+
+
+
+
+################# Advanced (Nâng cao)-------------------------------##################    
 
 
 
