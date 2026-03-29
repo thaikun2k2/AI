@@ -6,7 +6,7 @@
 
 
 
-
+from my_type_OOP import*
 
 """
 class sinhvien:
@@ -169,7 +169,7 @@ class sinhvien:
 
 
 
-from my_type_OOP import*
+
 
 
 ## đang chưa đóng gói
@@ -233,28 +233,97 @@ from my_type_OOP import*
 
 ################# Đa hình trong OOP (Polymorphism)-------------------------------##################    
 
+###if 2 kiểu type nhưng lại 2 hàm có tên giống nhau thì sẽ xảy ra đa hình, khi đó hàm nào sẽ được gọi sẽ phụ thuộc vào kiểu dữ liệu của đối tượng mà hàm đó được gọi đến
+### đa hình giúp cho code linh hoạt hơn, dễ bảo trì hơn và dễ mở rộng hơn
+
+"""
+class type1:
+    def hamxx():
+        chức năng 1
+class type2:
+    def hamxx():
+        chức năng 2
+
+a.hamxx() ===>>> chức năng 1
+b.hamxx() ===>>> chức năng 2
+
+### xây dựng hàm 1 hàm chung cho cả a và b :
+def hamxx(obj):
+    obj.hamxx()
+hamxx(a) ===>>> chức năng 1
+hamxx(b) ===>>> chức năng 2
+## ==>> đây đc gọi là tính đa hình (Polymorphism)
+"""
+
+
+# #from my_type_OOP import*
 
 
 
 
+# sv1 = sinhvien_nam("Nguyen Van A", 123456)
+# sv2 = sinhvien_nu("Nguyen Van B", 654321)
+
+# # x = sv1.xinchao()
+# # y = sv2.xinchao()
 
 
+# ### tính đa hình của hàm
+# xinchao_dahinh(sv1)
+# xinchao_dahinh(sv2)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### =====>>>>>> xây dụng hàm chung cho các kiểu dữ liệu khác nhau thì đc gọi là tính đa hình (Polymorphism)
+### lưu ý: là phải cùng tên hàm nhưng chức năng khác nhau
 
 
 ################# Đa hình trong OOP (Polymorphism)-------------------------------##################    
+
+
+################# Trừu tượng trong OOP (Abstraction)-------------------------------##################    
+
+
+### Class Father
+
+
+
+svdb1 = sinhvien_db("Nguyen Van A", 123456)
+print(f'{svdb1.thong_tin()}')
+
+################# Trừu tượng trong OOP (Abstraction)-------------------------------##################    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
