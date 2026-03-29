@@ -286,9 +286,10 @@ hamxx(b) ===>>> chức năng 2
 ### Class Father
 
 
+### Trừu tượng = chỉ định nghĩa “cái cần làm”, không nói “làm như thế nào”.
 
-svdb1 = sinhvien_db("Nguyen Van A", 123456)
-print(f'{svdb1.thong_tin()}')
+# svdb1 = sinhvien_db("Nguyen Van A", 123456)
+# print(f'{svdb1.thong_tin()}')
 
 ################# Trừu tượng trong OOP (Abstraction)-------------------------------##################    
 

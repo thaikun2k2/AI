@@ -193,33 +193,48 @@
 ################# Trừu tượng trong OOP (Abstraction)-------------------------------##################    
 ## Trừu tượng là một khái niệm trong OOP cho phép chúng ta tạo ra các lớp trừu tượng (abstract class) và các phương thức trừu tượng (abstract method). Lớp trừu tượng là một lớp không thể được khởi tạo trực tiếp, mà chỉ có thể được kế thừa bởi các lớp con. Phương thức trừu tượng là một phương thức không có phần thân, mà chỉ có định nghĩa, và phải được triển khai trong các lớp con.
 ## Abstract class cách dùng:
-# ko phải để tạo object(đối tượng)
-# mà để định nghĩa "khung" , ép buộc class con phải 
+## Vai trò của Class Father sẽ:
+# Định nghĩa khung chung
+# Không chứa logic cụ thể (hoặc chứa ít)
+# Ép class con phải làm theo khung chung đó
+# lưu ý: class cha ko tạo object(đối tượng)
 
-from abc import ABC, abstractmethod
-###### Class Father
-class sinhvien(ABC):
-
-    @abstractmethod
-    def thong_tin(self):
-        pass
-
-
-class sinhvien_db(sinhvien):
-
-    def __init__(self, hoten, m_sv):
-        self.name = hoten
-        self.msv = m_sv
-
-    def thong_tin(self):
-        return f'Thông tin sinh viên 1 là:\n- Full name: {self.name}\n- mã sinh viên là: {self.msv}\n'
+## Vai trò của Class Children sẽ:
+# Kế thừa khung chung từ class cha
+# Triển khai logic cụ thể cho các phương thức trừu tượng
 
 
+## Trừu tượng = chỉ định nghĩa “cái cần làm”, không nói “làm như thế nào”.
+
+# from abc import ABC, abstractmethod
+# ###### Class Father
+# class sinhvien(ABC):
+
+#     @abstractmethod
+#     def thong_tin(self):
+#         pass
 
 
+# class sinhvien_db(sinhvien):
 
+#     def __init__(self, hoten, m_sv):
+#         self.name = hoten
+#         self.msv = m_sv
 
-
-
+#     def thong_tin(self):
+#         return f'Thông tin sinh viên 1 là:\n- Full name: {self.name}\n- mã sinh viên là: {self.msv}\n'
 
 ################# Trừu tượng trong OOP (Abstraction)-------------------------------##################    
+
+
+
+
+
+
+
+
+
+
+
+
+
