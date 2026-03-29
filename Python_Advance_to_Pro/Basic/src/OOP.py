@@ -33,9 +33,9 @@ class sinhvien():
         return dtb
 sv1 = sinhvien("Nguyen Van A", 123456)
 
-
+x = sv1.diem_tb(6, 7, 8, 9, 10)
 print(sv1.name)
 print(sv1.msv)
 
-
-print(sv1.diem_tb(8, 9, 10))
+print("Điểm trung bình của sinh viên là: ", x)
+print(sv1.diem_tb(6, 7, 8, 9, 10))
