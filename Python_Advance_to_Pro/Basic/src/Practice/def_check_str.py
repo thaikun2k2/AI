@@ -67,18 +67,34 @@
 
 
 
+# string1, s2, copy1 = str(input(" Nhập vào string, số ký tự đầu, số lần copy : ")).split(",")
+
+# s1 = int(s2)
+# copy = int(copy1)
+
+# def copy_kytu(string1, copy):
+#     global s1
+#     ketqua = ""
+#     for i in range(copy):
+#         ketqua += string1[0:s1]
+#     return ketqua
+
+# xx = copy_kytu(string1, copy)
+
+# print(xx)
+
+
+
 string1, s2, copy1 = str(input(" Nhập vào string, số ký tự đầu, số lần copy : ")).split(",")
 
 s1 = int(s2)
 copy = int(copy1)
 
-def copy_kytu(string1, copy):
-    global s1
+def copy_kytu(string1, s1, copy):
     ketqua = ""
     for i in range(copy):
         ketqua += string1[0:s1]
     return ketqua
-
-xx = copy_kytu(string1, copy)
+xx = copy_kytu(string1, s1, copy)
 
 print(xx)
