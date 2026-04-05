@@ -86,4 +86,4 @@ O(N), O(N**2), O(2**N)
 # print_items(10)
 
 
-
+### đọ phức tạp time O(log n)
