@@ -119,3 +119,15 @@ O(N), O(N**2), O(2**N)
 # print(x1)
 # x = pair_sum(1, 2)
 # print(x)
+
+
+
+
+
+
+############
+
+
+###---different term for input - add vs multiply
+
+
