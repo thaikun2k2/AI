@@ -87,3 +87,35 @@ O(N), O(N**2), O(2**N)
 
 
 ### đọ phức tạp time O(log n)
+##input vào siêu lớn 
+
+
+# ###space complexity(độ phức tạp không gian)
+
+# #Eg:
+# # chiếm dụng bộ nhớ và ngăn xếp
+# def sum(n):
+#     if n <= 0:
+#         return 0
+#     return n + sum(n - 1)
+# ## hàm đệ quy này sẽ thực hiện xếp vào ngăn xếp không gian gây chiếm dụng bộ nhớ thực tế 
+# #Eg nếu chuyền vào n = 3 thì sẽ 3 ngăn xếp. khi n= 0 thì kết thúc.
+# sum(3)
+
+
+## trường hợp n cko chiếm dụng độ phúc tạp O(n)
+
+# def pair_sum_sequence(n):
+#     total = 0
+#     for i in range(n):
+#         total = total + pair_sum(i, i + 1)
+#     return total
+
+
+# def pair_sum(a, b):
+#     return a + b
+
+# x1 = pair_sum_sequence(8)
+# print(x1)
+# x = pair_sum(1, 2)
+# print(x)
