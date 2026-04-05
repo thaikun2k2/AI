@@ -131,24 +131,30 @@ O(N), O(N**2), O(2**N)
 ###---different term for input - add vs multiply
 
 
-##Add the Runtime: O(a + b)
-# độ phức tạp O(n + n) = O(2n)
-def print_items(a,b):
-    for i in range(a):
-        print(i)
+# ##Add the Runtime: O(a + b)
+# # độ phức tạp O(n + n) = O(2n)
+# def print_items(a,b):
+#     for i in range(a):
+#         print(i)
     
-    for j in range(b):
-        print(j)
-# DO NOT CHANGE THIS LINE:
-print_items(10, 5)
+#     for j in range(b):
+#         print(j)
+# # DO NOT CHANGE THIS LINE:
+# print_items(10, 5)
 
 
 
 
-#Multiply the Runtimes: O(A * B)
-def print_items(a,b):
-    for i in range(a):
-        for j in range(b):
-            print(i, j)
+# #Multiply the Runtimes: O(A * B)
+# def print_items(a,b):
+#     for i in range(a):
+#         for j in range(b):
+#             print(i, j)
 
-print_items(10, 5)
+# print_items(10, 5)
+
+
+
+
+
+
