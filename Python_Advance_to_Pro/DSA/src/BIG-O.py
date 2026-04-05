@@ -1,4 +1,27 @@
+"""
+🎯 1. Mục đích chính của Big-O (rút gọn từ bài giảng)
 
+👉 Big-O dùng để:
+
+Đo và so sánh độ hiệu quả của thuật toán khi dữ liệu tăng lên
+
+🎯 Time Complexity là gì?
+
+Time Complexity (độ phức tạp thời gian) là cách đo số lượng phép toán mà thuật toán cần thực hiện khi kích thước input tăng lên.
+
+🧠 Hiểu đơn giản
+
+👉 Không đo thời gian thực (giây) ❌
+👉 Mà đo:
+
+Thuật toán chạy bao nhiêu bước khi dữ liệu lớn dần
+
+
+"""
+
+
+
+## độ phức tạp O(n)
 # def print_items(n):
 #     for i in range(n):
 #         print(i)
@@ -6,7 +29,7 @@
 # # DO NOT CHANGE THIS LINE:
 # print_items(10)
 
-
+## độ phức tạp O(n + n) = O(2n)
 # def print_items(n):
 #     for i in range(n):
 #         print(i)
