@@ -145,13 +145,13 @@ O(N), O(N**2), O(2**N)
 
 
 
-#Multiply the Runtimes: O(A * B)
-def print_items(a,b):
-    for i in range(a):
-        for j in range(b):
-            print(i, j)
+# #Multiply the Runtimes: O(A * B)
+# def print_items(a,b):
+#     for i in range(a):
+#         for j in range(b):
+#             print(i, j)
 
-print_items(10, 5)
+# print_items(10, 5)
 
 
 
