@@ -65,6 +65,13 @@ ADMIN@DESKTOP-1URNQ5U MINGW64 ~
 $
 
 
+
+####
+git push --set-upstream origin main
+
+==
+git push -u origin main
+####
 ````markdown
 # 🚀 Git & GitHub Complete Guide (A → Z)
 
