@@ -11,11 +11,8 @@ Dưới đây là **file `README.md` hoàn chỉnh** (tổng hợp full kiến t
 | 💥 Lộ ra có sao không? | Không sao              | Nguy hiểm cực |
 
 
-
 ~/.ssh/id_ed25519        # private key
 ~/.ssh/id_ed25519.pub    # public key
-
-
 
 
 ADMIN@DESKTOP-1URNQ5U MINGW64 ~
@@ -48,22 +45,12 @@ ADMIN@DESKTOP-1URNQ5U MINGW64 ~
 $
 
 ADMIN@DESKTOP-1URNQ5U MINGW64 ~
-$
-
-ADMIN@DESKTOP-1URNQ5U MINGW64 ~
-$
-
-ADMIN@DESKTOP-1URNQ5U MINGW64 ~
 $ cat /c/Users/ADMIN/.ssh/id_ed25519.pub
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF8E8a5I/4C63b2bWr/0X/6sbWjcK0rOCdpgYTZ8RL7F thaikun2k2@gmail.com
 
 ADMIN@DESKTOP-1URNQ5U MINGW64 ~
 $ ssh -T git@github.com
 Hi thaikun2k2! You've successfully authenticated, but GitHub does not provide shell access.
-
-ADMIN@DESKTOP-1URNQ5U MINGW64 ~
-$
-
 
 
 ####
@@ -72,7 +59,6 @@ git push --set-upstream origin main
 ==
 git push -u origin main
 ####
-
 
 
 ````markdown
