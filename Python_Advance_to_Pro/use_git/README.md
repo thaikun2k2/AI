@@ -2,6 +2,69 @@ Dưới đây là **file `README.md` hoàn chỉnh** (tổng hợp full kiến t
 
 ---
 
+
+|                        | Public Key             | Private Key   |
+| ---------------------- | ---------------------- | ------------- |
+| 📌 Mục đích            | Chia sẻ cho người khác | Giữ bí mật    |
+| 🔐 Vai trò             | Mã hóa / xác thực      | Giải mã / ký  |
+| 📤 Có thể gửi đi?      | ✔ Có                   | ❌ Không       |
+| 💥 Lộ ra có sao không? | Không sao              | Nguy hiểm cực |
+
+
+
+~/.ssh/id_ed25519        # private key
+~/.ssh/id_ed25519.pub    # public key
+
+
+
+
+ADMIN@DESKTOP-1URNQ5U MINGW64 ~
+$
+
+ADMIN@DESKTOP-1URNQ5U MINGW64 ~
+$ ssh-keygen -t ed25519 -C "thaikun2k2@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/ADMIN/.ssh/id_ed25519):
+Enter passphrase for "/c/Users/ADMIN/.ssh/id_ed25519" (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/ADMIN/.ssh/id_ed25519
+Your public key has been saved in /c/Users/ADMIN/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:cXzrJNiH7voaOvvS4bIHD3OiBgi5ZCA9JNyx2ScalRQ thaikun2k2@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|ooo.oEo          |
+|ooo.=.   .       |
+|o. = o .. o .    |
+|oo  o o  = o .   |
+|+o .    S + +    |
+|o .   = o. =     |
+|   . . X... .    |
+|    o +.=o       |
+|   .  +O++o      |
++----[SHA256]-----+
+
+ADMIN@DESKTOP-1URNQ5U MINGW64 ~
+$
+
+ADMIN@DESKTOP-1URNQ5U MINGW64 ~
+$
+
+ADMIN@DESKTOP-1URNQ5U MINGW64 ~
+$
+
+ADMIN@DESKTOP-1URNQ5U MINGW64 ~
+$ cat /c/Users/ADMIN/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF8E8a5I/4C63b2bWr/0X/6sbWjcK0rOCdpgYTZ8RL7F thaikun2k2@gmail.com
+
+ADMIN@DESKTOP-1URNQ5U MINGW64 ~
+$ ssh -T git@github.com
+Hi thaikun2k2! You've successfully authenticated, but GitHub does not provide shell access.
+
+ADMIN@DESKTOP-1URNQ5U MINGW64 ~
+$
+
+
 ````markdown
 # 🚀 Git & GitHub Complete Guide (A → Z)
 
