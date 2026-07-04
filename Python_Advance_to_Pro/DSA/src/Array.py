@@ -4,7 +4,6 @@
 # Thêm phần tử vào mảng
 # Xóa phần tử khỏi mảng
 
-##Thực chiến LeetCode
-##Bài tập về duyệt mảng: 
-# 1295. Find Numbers with Even Number of Digits
+
+
 
