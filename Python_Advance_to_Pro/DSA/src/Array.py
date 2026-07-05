@@ -5,5 +5,5 @@
 # Xóa phần tử khỏi mảng
 
 
-
+## Kỹ thuật 2 con trỏ trg thêm phần tử vào mảng hoặc xóa phần tử trong mảng
 
